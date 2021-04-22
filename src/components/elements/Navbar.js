@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const NavBar = () => {
   return (
     <>
@@ -67,34 +69,33 @@ export const NavBar = () => {
       <header className="p-3 mb-3 bg-dark border-bottom">
         <div className="container">
           <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none text-light navbar-brand"
             >
               React Redux Dashboard
-            </a>
+            </Link>
 
             <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
-                <a href="#" className="nav-link px-2 text-white">
+                <Link to="/" className="nav-link px-2 text-white">
                   Dashboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link px-2 text-white">
+                <Link to="/" className="nav-link px-2 text-white">
                   Roles
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="nav-link px-2 text-white">
+                <Link to="/" className="nav-link px-2 text-white">
                   Users
-                </a>
+                </Link>
               </li>
             </ul>
 
             <div className="dropdown text-end">
-              <a
-                href="#"
+              <Link
                 className="d-block link-dark text-decoration-none dropdown-toggle"
                 id="dropdownUser1"
                 data-bs-toggle="dropdown"
@@ -107,33 +108,33 @@ export const NavBar = () => {
                   height="32"
                   className="rounded-circle"
                 />
-              </a>
+              </Link>
               <ul
                 className="dropdown-menu text-small"
                 aria-labelledby="dropdownUser1"
               >
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {/* <a className="dropdown-item" href="#">
                     New project...
-                  </a>
+                  </a> */}
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="">
                     Settings
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="">
                     Profile
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider"></hr>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="">
                     Sign out
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -148,13 +149,15 @@ export const NavBar = () => {
             <center>
               <p>
                 © 2021 Copyright:
-                <a
+                <Link
                   className="text-light"
-                  href="https://github.com/vinothsmart/"
+                  to={{
+                    pathname: "https://github.com/vinothsmart/",
+                  }}
                   target="_blank"
                 >
                   vinothsmart
-                </a>
+                </Link>
               </p>
             </center>
           </div>
