@@ -1,7 +1,7 @@
 export const NavBar = () => {
   return (
     <>
-      <nav className="navbar shadow sticky-top  fixed-top navbar-expand-sm navbar-dark bg-primary">
+      {/* <nav className="navbar shadow sticky-top  fixed-top navbar-expand-sm navbar-dark bg-primary">
         <div className="container">
           <a className="navbar-brand">React Redux Dashboard</a>
           <button
@@ -41,7 +41,7 @@ export const NavBar = () => {
                     alt="mdo"
                     width="32"
                     height="32"
-                    class="rounded-circle me-2"
+                    className="rounded-circle me-2"
                   />
                   <strong>Vinoth</strong>
                 </a>
@@ -63,39 +63,39 @@ export const NavBar = () => {
             </ul>
           </div>
         </div>
-      </nav>
-      <header class="p-3 mb-3 bg-dark border-bottom">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      </nav> */}
+      <header className="p-3 mb-3 bg-dark border-bottom">
+        <div className="container">
+          <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a
               href="/"
-              class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+              className="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none text-light navbar-brand"
             >
-              Logo
+              React Redux Dashboard
             </a>
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li>
-                <a href="#" class="nav-link px-2 link-dark">
+                <a href="#" className="nav-link px-2 text-white">
                   Dashboard
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link px-2 link-dark">
+                <a href="#" className="nav-link px-2 text-white">
                   Roles
                 </a>
               </li>
               <li>
-                <a href="#" class="nav-link px-2 link-dark">
+                <a href="#" className="nav-link px-2 text-white">
                   Users
                 </a>
               </li>
             </ul>
 
-            <div class="dropdown text-end">
+            <div className="dropdown text-end">
               <a
                 href="#"
-                class="d-block link-dark text-decoration-none dropdown-toggle"
+                className="d-block link-dark text-decoration-none dropdown-toggle"
                 id="dropdownUser1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -105,33 +105,33 @@ export const NavBar = () => {
                   alt="mdo"
                   width="32"
                   height="32"
-                  class="rounded-circle"
+                  className="rounded-circle"
                 />
               </a>
               <ul
-                class="dropdown-menu text-small"
+                className="dropdown-menu text-small"
                 aria-labelledby="dropdownUser1"
               >
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     New project...
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Settings
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Profile
                   </a>
                 </li>
                 <li>
-                  <hr class="dropdown-divider"></hr>
+                  <hr className="dropdown-divider"></hr>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a className="dropdown-item" href="#">
                     Sign out
                   </a>
                 </li>
@@ -141,15 +141,15 @@ export const NavBar = () => {
         </div>
       </header>
 
-      <div class="b-example-divider"></div>
-      <nav className="navbar fixed-bottom navbar-light bg-light">
+      <div className="b-example-divider"></div>
+      <nav className="navbar fixed-bottom text-light bg-dark">
         <div className="container-fluid">
           <div className="col-lg-12">
             <center>
               <p>
                 © 2021 Copyright:
                 <a
-                  className="text-dark"
+                  className="text-light"
                   href="https://github.com/vinothsmart/"
                   target="_blank"
                 >
