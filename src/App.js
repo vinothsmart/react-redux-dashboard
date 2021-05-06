@@ -1,6 +1,7 @@
 import "./styles/App.css";
 import Home from "./components/pages/Home";
 import Test from "./components/pages/Test";
+import Testing from "./components/pages/Testing";
 import Navbar from "./components/elements/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Roles from "./components/pages/Roles/Roles";
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/test" component={Test} />
+          <Route exact path="/testing" component={Testing} />
           <Route exact path="/roles" component={Roles} />
         </Switch>
       </div>
