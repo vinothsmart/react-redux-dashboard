@@ -83,13 +83,18 @@ export const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/" className="nav-link px-2 text-white">
+                <Link to="/roles" className="nav-link px-2 text-white">
                   Roles
                 </Link>
               </li>
               <li>
                 <Link to="/" className="nav-link px-2 text-white">
                   Users
+                </Link>
+              </li>
+              <li>
+                <Link to="/test" className="nav-link px-2 text-white">
+                  Test
                 </Link>
               </li>
             </ul>
