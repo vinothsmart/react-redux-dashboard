@@ -1,10 +1,10 @@
 import "./styles/App.css";
-import Home from "./components/pages/Home";
-import Test from "./components/pages/Test";
-import Testing from "./components/pages/Testing";
+import Home from "../src/pages/Home";
+import Test from "../src//pages/Test";
+import Testing from "../src/pages/Testing";
 import Navbar from "./components/elements/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Roles from "./components/pages/Roles/Roles";
+import Roles from "../src/pages/Roles/Roles";
 
 function App() {
   return (
