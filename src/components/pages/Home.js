@@ -1,4 +1,4 @@
-const Home = () => {
+export const Home = () => {
   return (
     <div className="container">
       <div className="py-4">
@@ -7,5 +7,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

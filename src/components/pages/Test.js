@@ -1,4 +1,4 @@
-const Test = () => {
+export const Test = () => {
   let numbers = [1, 55, 22, 60, 4];
 
   console.log(numbers);
@@ -149,10 +149,8 @@ const Test = () => {
   return (
     <div className="container">
       <div className="py-4">
-        <h1> Testing </h1>
+        <h1> Test Page </h1>
       </div>
     </div>
   );
 };
-
-export default Test;

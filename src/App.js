@@ -1,7 +1,5 @@
 import "./styles/App.css";
-import Home from "./components/pages/Home";
-import Test from "./components/pages/Test";
-import Testing from "./components/pages/Testing";
+import { Home, Test, Testing } from "./components";
 import Navbar from "./components/elements/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Roles from "./components/pages/Roles/Roles";

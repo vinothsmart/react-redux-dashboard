@@ -97,6 +97,11 @@ export const NavBar = () => {
                   Test
                 </Link>
               </li>
+              <li>
+                <Link to="/testing" className="nav-link px-2 text-white">
+                  Testing
+                </Link>
+              </li>
             </ul>
 
             <div className="dropdown text-end">
