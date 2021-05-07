@@ -1,4 +1,4 @@
-const Roles = () => {
+export const Roles = () => {
   return (
     <div className="container">
       <div className="py-4">
@@ -7,5 +7,3 @@ const Roles = () => {
     </div>
   );
 };
-
-export default Roles;

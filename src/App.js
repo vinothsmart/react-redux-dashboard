@@ -1,8 +1,6 @@
 import "./styles/App.css";
-import { Home, Test, Testing } from "./components";
-import Navbar from "./components/elements/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Roles from "./components/pages/Roles/Roles";
+import { Navbar, Home, Test, Testing, Roles } from "./components";
 
 function App() {
   return (
@@ -11,9 +9,9 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/roles" component={Roles} />
           <Route exact path="/test" component={Test} />
           <Route exact path="/testing" component={Testing} />
-          <Route exact path="/roles" component={Roles} />
         </Switch>
       </div>
     </Router>

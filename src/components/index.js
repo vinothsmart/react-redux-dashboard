@@ -1,2 +1,2 @@
-export * from "./elements/Navbar";
+export * from "./elements";
 export * from "./pages";
