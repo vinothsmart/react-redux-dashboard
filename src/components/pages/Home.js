@@ -1,9 +1,14 @@
+import { SeoTool } from "../elements";
+
 export const Home = () => {
   return (
-    <div className="container">
-      <div className="py-4">
-        <h1> Welcome to React Redux Dashboard </h1>
+    <>
+      <SeoTool title="Home Page" />
+      <div className="container">
+        <div className="py-4">
+          <h1> Welcome to React Redux Dashboard </h1>
+        </div>
       </div>
-    </div>
+    </>
   );
 };

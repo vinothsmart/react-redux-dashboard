@@ -1,3 +1,5 @@
+import { SeoTool } from "../elements";
+
 export const Test = () => {
   let numbers = [1, 55, 22, 60, 4];
 
@@ -147,10 +149,13 @@ export const Test = () => {
   console.log(sssssss);
 
   return (
-    <div className="container">
-      <div className="py-4">
-        <h1> Test Page </h1>
+    <>
+      <SeoTool title="Test Page" />
+      <div className="container">
+        <div className="py-4">
+          <h1> Test Page </h1>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
