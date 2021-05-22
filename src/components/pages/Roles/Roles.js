@@ -1,7 +1,10 @@
 import { SeoTool } from "../../elements";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const Roles = () => {
+  const roles = useSelector((state) => state.role.roles);
+  console.log("roles", roles);
   return (
     <>
       <SeoTool title="Roles" />
@@ -22,24 +25,26 @@ export const Roles = () => {
               </tr>
             </thead>
             <tbody>
-              {/* {roles.map((role) => {
-              <tr>
-                <th scope="row">{role.id}</th>
-                <td>{role.name}</td>
-                <td>
-                  <Link to={`/contacts/edit/${role.id}`}>
-                    <button className="btn btn-primary" type="submit">
-                      Edit
-                    </button>
-                  </Link>
-                  <Link>
-                    <button className="btn btn-primary" type="submit">
-                      Delete
-                    </button>
-                  </Link>
-                </td>
-              </tr>;
-            })} */}
+              {roles.map((role) => {
+                return (
+                  <tr>
+                    <th scope="row">{role.userRoleId}</th>
+                    <td>{role.userRole}</td>
+                    <td>
+                      <Link to={`/contacts/edit/${role.userRoleId}`}>
+                        <button className="btn btn-primary mr-20" type="submit">
+                          Edit
+                        </button>
+                      </Link>
+                      <Link>
+                        <button className="btn btn-primary" type="submit">
+                          Delete
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
