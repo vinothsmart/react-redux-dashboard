@@ -1,4 +1,3 @@
-import "./styles/App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Navbar, Home, Test, Testing, Roles, AddRole } from "./components";
 import { Provider } from "react-redux";
