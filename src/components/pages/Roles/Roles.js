@@ -6,8 +6,9 @@ export const Roles = () => {
     <>
       <SeoTool title="Roles" />
       <div className="container">
-        <div className="py-4">
-          <h1> Roles List </h1>
+        <div className="clearfix" style={{ padding: ".5rem" }}>
+          <h1 className="float-start"> Roles List </h1>
+          <button className="btn btn-danger float-end">Add Role</button>
         </div>
         <table className="table table-shadow table-striped">
           <thead>
