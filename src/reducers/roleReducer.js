@@ -1,5 +1,18 @@
 const initialState = {
-  roles: [],
+  roles: [
+    {
+      userRoleId: "pmYQej4on6",
+      userRole: "SuperAdmin",
+    },
+    {
+      userRoleId: "aYRQ8KJwx2",
+      userRole: "Admin",
+    },
+    {
+      userRoleId: "2kqA9zJOZ3",
+      userRole: "User",
+    },
+  ],
   role: null,
 };
 
