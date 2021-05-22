@@ -6,19 +6,25 @@ export const SeoTool = (props) => {
   return (
     <>
       <Helmet>
-        <title>{title ? title : "React Redux Dashboard"}</title>
+        <title>
+          {title
+            ? "Vinoth Smart | " + title
+            : "Vinoth Smart | React Redux Dashboard"}
+        </title>
         <meta
           name="keywords"
           content={
-            keywords ? keywords : "Web site created using create-react-app"
+            keywords
+              ? "Vinoth Smart | " + keywords
+              : "Vinoth Smart | React Redux Dashboard"
           }
         />
         <meta
           name="description"
           content={
             description
-              ? description
-              : "Web site created using create-react-app"
+              ? "Vinoth Smart | " + description
+              : "Vinoth Smart | React Redux Dashboard"
           }
         />
       </Helmet>
