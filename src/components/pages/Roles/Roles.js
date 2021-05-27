@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 export const Roles = () => {
   const roles = useSelector((state) => state.role.roles);
-  console.log("roles", roles);
+  // console.log("roles", roles);
   return (
     <>
       <SeoTool title="Roles" />
@@ -31,12 +31,11 @@ export const Roles = () => {
                     <th scope="row">{role.userRoleId}</th>
                     <td>{role.userRole}</td>
                     <td>
-                      <Link to={`/contacts/edit/${role.userRoleId}`}>
-                        {/* <button className="btn btn-primary mr-20">Edit</button> */}
-                        <i class="bi bi-pencil-fill"></i>
+                      <Link to={`/roles/edit/${role.userRoleId}`}>
+                        <span className="material-icons">edit</span>
                       </Link>
-                      <Link>
-                        <button className="btn btn-primary">Delete</button>
+                      <Link to={`/roles/delete/${role.userRoleId}`}>
+                        <span className="material-icons">remove_circle</span>
                       </Link>
                     </td>
                   </tr>
