@@ -32,14 +32,11 @@ export const Roles = () => {
                     <td>{role.userRole}</td>
                     <td>
                       <Link to={`/contacts/edit/${role.userRoleId}`}>
-                        <button className="btn btn-primary mr-20" type="submit">
-                          Edit
-                        </button>
+                        {/* <button className="btn btn-primary mr-20">Edit</button> */}
+                        <i class="bi bi-pencil-fill"></i>
                       </Link>
                       <Link>
-                        <button className="btn btn-primary" type="submit">
-                          Delete
-                        </button>
+                        <button className="btn btn-primary">Delete</button>
                       </Link>
                     </td>
                   </tr>
