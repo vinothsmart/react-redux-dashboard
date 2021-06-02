@@ -1,5 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Navbar, Home, Test, Testing, Roles, AddRole } from "./components";
+import {
+  Navbar,
+  Home,
+  Test,
+  Testing,
+  Roles,
+  AddRole,
+  Count,
+} from "./components";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -15,6 +23,7 @@ function App() {
             <Route exact path="/test" component={Test} />
             <Route exact path="/testing" component={Testing} />
             <Route exact path="/roles/add" component={AddRole} />
+            <Route exact path="/count" component={Count} />
           </Switch>
         </div>
       </Router>
