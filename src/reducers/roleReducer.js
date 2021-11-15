@@ -3,7 +3,7 @@ const initialState = {
   role: null,
 };
 
-export default (state = initialState, { type, payload }) => {
+const roles = (state = initialState, { type, payload }) => {
   switch (type) {
     case "GET_ROLES":
       return { ...state, roles: payload };
@@ -21,15 +21,17 @@ export default (state = initialState, { type, payload }) => {
       return {
         ...state,
         roles: state.posts.map((roleItem) =>
-          roleItem.id == payload.id ? payload : roleItem
+          roleItem.id === payload.id ? payload : roleItem
         ),
       };
     case "DELETE_ROLE":
       return {
         ...state,
-        roles: state.posts.filter((roleItem) => roleItem.id != payload),
+        roles: state.posts.filter((roleItem) => roleItem.id !== payload),
       };
     default:
       return state;
   }
 };
+
+export default roles;
