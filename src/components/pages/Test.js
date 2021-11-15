@@ -6,7 +6,7 @@ export const Test = () => {
   console.log(numbers);
 
   numbers.map((number) => {
-    console.log(number);
+    return number;
   });
 
   /**
@@ -21,8 +21,8 @@ export const Test = () => {
 
   let names3 = [...names, ...names1];
 
-  const printNumbers = numberss.map((num) => {
-    console.log(num);
+  numberss.map((num) => {
+    return num;
   });
 
   let getLastNumberofRow = numbers.reduce(function checkLastNumberofRow(a, b) {
@@ -50,7 +50,7 @@ export const Test = () => {
   console.log(names4);
 
   numbers.map((num) => {
-    console.log(num);
+    return num;
   });
 
   /**
@@ -88,11 +88,8 @@ export const Test = () => {
 
   new add(2, 3);
 
-  let c;
-  let d;
-
   let addaaaa = (c, d) => console.log(c + d);
-  // new addaaaa(2, 3);
+  new addaaaa(2, 3);
 
   const array2 = [1, 2, 3, 4, 4, 1];
 
@@ -120,11 +117,11 @@ export const Test = () => {
   console.log(array);
   // shows [1, 2, 3, 4, 5], original array remains intact.
 
-  var array = [1, 2, 3, 4, 5];
-  console.log(array.splice(2));
+  var array4 = [1, 2, 3, 4, 5];
+  console.log(array4.splice(2));
   // shows [3, 4, 5], returned removed item(s) as a new array object.
 
-  console.log(array);
+  console.log(array4);
   // shows [1, 2], original array altered.
 
   var array3 = [6, 7, 8, 9, 0];
