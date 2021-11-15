@@ -150,7 +150,7 @@ export const Test = () => {
 
   return (
     <>
-      <SeoTool title="Test Page" />
+      <SeoTool title="Test" />
       <div className="container">
         <div className="py-4">
           <h1> Test Page </h1>

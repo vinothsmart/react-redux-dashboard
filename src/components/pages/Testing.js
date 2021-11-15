@@ -4,7 +4,7 @@ export const Testing = () => {
   return (
     <>
       <SeoTool
-        title="Testing Page"
+        title="Testing"
         keywords="Vinoth App React Redux Dashboard"
         description="Vinoth App React Redux Dashboard"
       />
