@@ -89,7 +89,7 @@ export const Test = () => {
   new add(2, 3);
 
   let addaaaa = (c, d) => console.log(c + d);
-  new addaaaa(2, 3);
+  // new addaaaa(2, 3);
 
   const array2 = [1, 2, 3, 4, 4, 1];
 
