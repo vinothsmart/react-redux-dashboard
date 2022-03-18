@@ -27,7 +27,7 @@ export const Roles = () => {
             <tbody>
               {roles.map((role) => {
                 return (
-                  <tr>
+                  <tr key={role.userRoleId}>
                     <th scope="row">{role.userRoleId}</th>
                     <td>{role.userRole}</td>
                     <td>

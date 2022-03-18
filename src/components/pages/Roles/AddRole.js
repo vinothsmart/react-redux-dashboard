@@ -6,14 +6,14 @@ import { useHistory } from "react-router";
 
 export const AddRole = () => {
   let history = useHistory();
-  const [role, setROle] = useState("");
+  const [role, setRole] = useState("");
 
   const dispatch = useDispatch();
 
   const addRole = (e) => {
     e.preventDefault();
     const inputFields = {
-      userRoleId: role,
+      userRoleId: Math.trunc(Math.random().toString() * 100),
       userRole: role,
     };
     // console.log(inputFields);
@@ -37,7 +37,7 @@ export const AddRole = () => {
                     placeholder="role"
                     value={role}
                     onChange={(e) => {
-                      setROle(e.target.value);
+                      setRole(e.target.value);
                     }}
                   />
                 </div>
