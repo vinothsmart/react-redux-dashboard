@@ -10,7 +10,7 @@ const roles = (state = initialState, { type, payload }) => {
     case "CREATE_ROLE":
       return {
         ...state,
-        roles: [payload, ...state.roles],
+        roles: [payload.data, ...state.roles],
       };
     case "GET_ROLE":
       return {

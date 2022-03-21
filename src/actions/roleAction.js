@@ -16,10 +16,13 @@ export const getRole = (id) => ({
 });
 
 // create a role
-export const createRole = (role) => ({
-  type: "CREATE_ROLE",
-  payload: role,
-});
+export const createRole = (role) => async (dispatch) => {
+  const result = await axios.post("http://127.0.0.1:8000/api/roles", role);
+  dispatch({
+    type: "CREATE_ROLE",
+    payload: result.data,
+  });
+};
 
 // update a role
 export const updateRole = (role) => ({
