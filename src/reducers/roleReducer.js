@@ -6,7 +6,7 @@ const initialState = {
 const roles = (state = initialState, { type, payload }) => {
   switch (type) {
     case "GET_ROLES":
-      return { ...state, roles: payload };
+      return { ...state, roles: payload.data };
     case "CREATE_ROLE":
       return {
         ...state,

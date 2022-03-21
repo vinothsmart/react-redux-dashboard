@@ -1,10 +1,17 @@
 import { SeoTool } from "../../elements";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getRoles } from "../../../actions";
 
 export const Roles = () => {
+  const dispatch = useDispatch();
   const roles = useSelector((state) => state.role.roles);
-  // console.log("roles", roles);
+
+  useEffect(() => {
+    dispatch(getRoles());
+  }, [dispatch]);
+
   return (
     <>
       <SeoTool title="Roles" />

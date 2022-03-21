@@ -2,8 +2,7 @@ import axios from "axios";
 
 // get all roles
 export const getRoles = () => async (dispatch) => {
-  const result = await axios.get("http://localhost/api/users");
-  // const result = await axios.get("http://127.0.0.1:8000/api/users");
+  const result = await axios.get("http://127.0.0.1:8000/api/roles");
   dispatch({
     type: "GET_ROLES",
     payload: result.data,
