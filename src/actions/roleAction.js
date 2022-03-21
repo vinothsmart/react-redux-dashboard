@@ -1,8 +1,10 @@
 import axios from "axios";
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 // get all roles
 export const getRoles = () => async (dispatch) => {
-  const result = await axios.get("http://127.0.0.1:8000/api/roles");
+  const result = await axios.get(API_URL + "roles");
   dispatch({
     type: "GET_ROLES",
     payload: result.data,
@@ -11,7 +13,7 @@ export const getRoles = () => async (dispatch) => {
 
 // get a role
 export const getRole = (roleId) => async (dispatch) => {
-  const result = await axios.get(`http://127.0.0.1:8000/api/roles/${roleId}`);
+  const result = await axios.get(API_URL + `/roles/${roleId}`);
   dispatch({
     type: "GET_ROLE",
     payload: result.data,
@@ -20,7 +22,7 @@ export const getRole = (roleId) => async (dispatch) => {
 
 // create a role
 export const createRole = (role) => async (dispatch) => {
-  const result = await axios.post("http://127.0.0.1:8000/api/roles", role);
+  const result = await axios.post(API_URL + "roles", role);
   dispatch({
     type: "CREATE_ROLE",
     payload: result.data,
@@ -29,10 +31,7 @@ export const createRole = (role) => async (dispatch) => {
 
 // update a role
 export const updateRole = (role) => async (dispatch) => {
-  const result = await axios.put(
-    `http://127.0.0.1:8000/api/roles/${role.id}`,
-    role
-  );
+  const result = await axios.put(API_URL + `/roles/${role.id}`, role);
   dispatch({
     type: "UDATE_ROLE",
     payload: result.data,
