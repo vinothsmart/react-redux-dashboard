@@ -10,10 +10,13 @@ export const getRoles = () => async (dispatch) => {
 };
 
 // get a role
-export const getRole = (id) => ({
-  type: "GET_ROLE",
-  payload: id,
-});
+export const getRole = (roleId) => async (dispatch) => {
+  const result = await axios.get(`http://127.0.0.1:8000/api/roles/${roleId}`);
+  dispatch({
+    type: "GET_ROLE",
+    payload: result.data,
+  });
+};
 
 // create a role
 export const createRole = (role) => async (dispatch) => {
@@ -25,11 +28,16 @@ export const createRole = (role) => async (dispatch) => {
 };
 
 // update a role
-export const updateRole = (role) => ({
-  type: "UPDATE_ROLE",
-  payload: role,
-});
-
+export const updateRole = (role) => async (dispatch) => {
+  const result = await axios.put(
+    `http://127.0.0.1:8000/api/roles/${role.id}`,
+    role
+  );
+  dispatch({
+    type: "UDATE_ROLE",
+    payload: result.data,
+  });
+};
 // delete a role
 export const deleteRole = (id) => ({
   type: "DELETE_ROLE",

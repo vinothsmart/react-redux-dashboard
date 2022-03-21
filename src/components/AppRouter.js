@@ -1,6 +1,14 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { AddRole, Count, Home, Roles, Test, Testing } from "./pages";
+import {
+  AddRole,
+  Count,
+  Home,
+  Roles,
+  Test,
+  Testing,
+  UpdateRole,
+} from "./pages";
 
 const AppRouter = () => {
   return (
@@ -10,7 +18,7 @@ const AppRouter = () => {
       <Route exact path="/test" component={Test} />
       <Route exact path="/testing" component={Testing} />
       <Route exact path="/roles/add" component={AddRole} />
-      <Route exact path="/roles/edit/:id" component={AddRole} />
+      <Route exact path="/roles/edit/:id" component={UpdateRole} />
       <Route exact path="/count" component={Count} />
     </Switch>
   );
