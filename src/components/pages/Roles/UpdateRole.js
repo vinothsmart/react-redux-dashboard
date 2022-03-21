@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getRole } from "../../../actions";
+import { useParams, useHistory } from "react-router-dom";
+import { getRole, updateRole } from "../../../actions";
 import { SeoTool } from "../../elements";
 
 export const UpdateRole = () => {
@@ -9,9 +9,11 @@ export const UpdateRole = () => {
 
   const dispatch = useDispatch();
 
-  const selectedRole = useSelector((state) => state.role.role);
+  const history = useHistory();
 
   const [role, setRole] = useState("");
+
+  const selectedRole = useSelector((state) => state.role.role);
 
   const loadRole = useCallback(() => {
     dispatch(getRole(id));
@@ -21,12 +23,27 @@ export const UpdateRole = () => {
     setRole(e.target.value);
   }, []);
 
+  const handleRole = useCallback(
+    (e) => {
+      e.preventDefault();
+      const inputFields = {
+        id: id,
+        userRole: role,
+      };
+      dispatch(updateRole(inputFields));
+      history.push("/roles");
+    },
+    [dispatch, history, id, role]
+  );
+
   useEffect(() => {
     loadRole();
   }, [loadRole]);
 
   useEffect(() => {
-    setRole(selectedRole.userRole);
+    if (selectedRole) {
+      setRole(selectedRole.userRole);
+    }
   }, [selectedRole]);
 
   return (
@@ -37,7 +54,7 @@ export const UpdateRole = () => {
           <div className="card border-0 shadow">
             <div className="card-header">Update a Role</div>
             <div className="card-body">
-              <form>
+              <form onSubmit={handleRole}>
                 <div className="form-group mb-3">
                   <input
                     type="text"

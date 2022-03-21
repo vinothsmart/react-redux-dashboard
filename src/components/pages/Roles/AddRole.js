@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 
 export const AddRole = () => {
   const dispatch = useDispatch();
+
   const history = useHistory();
 
   const [role, setRole] = useState("");

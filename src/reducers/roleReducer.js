@@ -20,8 +20,10 @@ const roles = (state = initialState, { type, payload }) => {
     case "UPDATE_ROLE":
       return {
         ...state,
-        roles: state.posts.map((roleItem) =>
-          roleItem.id === payload.id ? payload : roleItem
+        roles: state.roles.map((roleItem) =>
+          roleItem.userRoleId === payload.data.userRoleId
+            ? payload.data
+            : roleItem
         ),
       };
     case "DELETE_ROLE":
