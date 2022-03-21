@@ -3,7 +3,6 @@ import { SeoTool } from "../../elements";
 import { createRole } from "../../../actions/index";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
-import shortid from "shortid";
 
 export const AddRole = () => {
   let history = useHistory();
@@ -14,10 +13,8 @@ export const AddRole = () => {
   const addRole = (e) => {
     e.preventDefault();
     const inputFields = {
-      userRoleId: shortid.generate(),
       userRole: role,
     };
-    // console.log(inputFields);
     dispatch(createRole(inputFields));
     history.push("/roles");
   };
