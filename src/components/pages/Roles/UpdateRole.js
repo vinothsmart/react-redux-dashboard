@@ -17,6 +17,10 @@ export const UpdateRole = () => {
     dispatch(getRole(id));
   }, [dispatch, id]);
 
+  const handleChange = useCallback((e) => {
+    setRole(e.target.value);
+  }, []);
+
   useEffect(() => {
     loadRole();
   }, [loadRole]);
@@ -40,6 +44,7 @@ export const UpdateRole = () => {
                     className="form-control"
                     placeholder="role"
                     value={role}
+                    onChange={handleChange}
                   />
                 </div>
                 <button className="btn btn-primary float-start" type="submit">
