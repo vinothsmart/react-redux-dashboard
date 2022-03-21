@@ -1,23 +1,33 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { SeoTool } from "../../elements";
 import { createRole } from "../../../actions/index";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
 
 export const AddRole = () => {
+  const dispatch = useDispatch();
   let history = useHistory();
+
   const [role, setRole] = useState("");
 
-  const dispatch = useDispatch();
+  const handleRole = useCallback(
+    (e) => {
+      setRole(e.target.value);
+    },
+    [setRole]
+  );
 
-  const addRole = (e) => {
-    e.preventDefault();
-    const inputFields = {
-      userRole: role,
-    };
-    dispatch(createRole(inputFields));
-    history.push("/roles");
-  };
+  const addRole = useCallback(
+    (e) => {
+      e.preventDefault();
+      const inputFields = {
+        userRole: role,
+      };
+      dispatch(createRole(inputFields));
+      history.push("/roles");
+    },
+    [dispatch, history, role]
+  );
 
   return (
     <>
@@ -27,16 +37,14 @@ export const AddRole = () => {
           <div className="card border-0 shadow">
             <div className="card-header">Add a Role</div>
             <div className="card-body">
-              <form onSubmit={(e) => addRole(e)}>
+              <form onSubmit={addRole}>
                 <div className="form-group mb-3">
                   <input
                     type="text"
                     className="form-control"
                     placeholder="role"
                     value={role}
-                    onChange={(e) => {
-                      setRole(e.target.value);
-                    }}
+                    onChange={handleRole}
                   />
                 </div>
                 <button className="btn btn-primary float-start" type="submit">
