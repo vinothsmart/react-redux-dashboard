@@ -1,12 +1,12 @@
 import { useCallback, useState } from "react";
 import { SeoTool } from "../../elements";
 import { createRole } from "../../../actions/index";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
 
 export const AddRole = () => {
   const dispatch = useDispatch();
-  let history = useHistory();
+  const history = useHistory();
 
   const [role, setRole] = useState("");
 

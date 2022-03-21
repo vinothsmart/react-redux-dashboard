@@ -13,10 +13,10 @@ export const getRoles = () => async (dispatch) => {
 
 // get a role
 export const getRole = (roleId) => async (dispatch) => {
-  const result = await axios.get(API_URL + `/roles/${roleId}`);
+  const result = await axios.get(API_URL + `roles/${roleId}`);
   dispatch({
     type: "GET_ROLE",
-    payload: result.data,
+    payload: result.data.data,
   });
 };
 
@@ -31,7 +31,7 @@ export const createRole = (role) => async (dispatch) => {
 
 // update a role
 export const updateRole = (role) => async (dispatch) => {
-  const result = await axios.put(API_URL + `/roles/${role.id}`, role);
+  const result = await axios.put(API_URL + `roles/${role.id}`, role);
   dispatch({
     type: "UDATE_ROLE",
     payload: result.data,
