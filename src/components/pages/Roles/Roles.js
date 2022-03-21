@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getRoles } from "../../../actions";
+import RoleList from "./RoleList";
 
 export const Roles = () => {
   const dispatch = useDispatch();
@@ -23,33 +24,7 @@ export const Roles = () => {
               <button className="btn btn-danger float-end">Add Role</button>
             </Link>
           </div>
-          <table className="table table-shadow table-striped">
-            <thead>
-              <tr>
-                <th scope="col">id</th>
-                <th scope="col">Role</th>
-                <th scope="col">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {roles.map((role) => {
-                return (
-                  <tr key={role.userRoleId}>
-                    <th scope="row">{role.userRoleId}</th>
-                    <td>{role.userRole}</td>
-                    <td>
-                      <Link to={`/roles/edit/${role.userRoleId}`}>
-                        <span className="material-icons">edit</span>
-                      </Link>
-                      <Link to={`/roles/delete/${role.userRoleId}`}>
-                        <span className="material-icons">remove_circle</span>
-                      </Link>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+          <RoleList rolesData={roles} />
         </div>
       </div>
     </>
