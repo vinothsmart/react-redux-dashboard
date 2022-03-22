@@ -1,18 +1,8 @@
 import { SeoTool } from "../../elements";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { getRoles } from "../../../actions";
 import RoleList from "./RoleList";
 
 export const Roles = () => {
-  const dispatch = useDispatch();
-  const roles = useSelector((state) => state.role.roles);
-
-  useEffect(() => {
-    dispatch(getRoles());
-  }, [dispatch]);
-
   return (
     <>
       <SeoTool title="Roles" />
@@ -24,7 +14,7 @@ export const Roles = () => {
               <button className="btn btn-danger float-end">Add Role</button>
             </Link>
           </div>
-          <RoleList rolesData={roles} />
+          <RoleList />
         </div>
       </div>
     </>
