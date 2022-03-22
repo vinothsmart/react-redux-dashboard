@@ -33,7 +33,7 @@ export const createRole = (role) => async (dispatch) => {
 export const updateRole = (role) => async (dispatch) => {
   const result = await axios.put(API_URL + `roles/${role.id}`, role);
   dispatch({
-    type: "UDATE_ROLE",
+    type: "UPDATE_ROLE",
     payload: result.data,
   });
 };
