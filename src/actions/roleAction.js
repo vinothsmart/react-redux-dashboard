@@ -16,7 +16,7 @@ export const getRole = (roleId) => async (dispatch) => {
   const result = await axios.get(API_URL + `roles/${roleId}`);
   dispatch({
     type: "GET_ROLE",
-    payload: result.data.data,
+    payload: result.data,
   });
 };
 

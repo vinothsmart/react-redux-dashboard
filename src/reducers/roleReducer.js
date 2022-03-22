@@ -15,7 +15,7 @@ const roles = (state = initialState, { type, payload }) => {
     case "GET_ROLE":
       return {
         ...state,
-        role: payload,
+        role: payload.data,
       };
     case "UPDATE_ROLE":
       return {
