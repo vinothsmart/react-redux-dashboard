@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import DeleteRole from "./DeleteRole";
 
 const RoleList = ({ rolesData }) => {
   return (
@@ -20,9 +21,7 @@ const RoleList = ({ rolesData }) => {
                 <Link to={`/roles/edit/${role.userRoleId}`}>
                   <span className="material-icons">edit</span>
                 </Link>
-                <Link to={`/roles/delete/${role.userRoleId}`}>
-                  <span className="material-icons">remove_circle</span>
-                </Link>
+                <DeleteRole id={role.userRoleId} />
               </td>
             </tr>
           );

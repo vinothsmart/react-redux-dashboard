@@ -29,7 +29,9 @@ const roles = (state = initialState, { type, payload }) => {
     case "DELETE_ROLE":
       return {
         ...state,
-        roles: state.posts.filter((roleItem) => roleItem.id !== payload),
+        roles: state.roles.filter(
+          (roleItem) => roleItem.userRoleId !== payload.data.userRoleId
+        ),
       };
     default:
       return state;

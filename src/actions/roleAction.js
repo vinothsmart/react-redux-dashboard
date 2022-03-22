@@ -38,7 +38,10 @@ export const updateRole = (role) => async (dispatch) => {
   });
 };
 // delete a role
-export const deleteRole = (id) => ({
-  type: "DELETE_ROLE",
-  payload: id,
-});
+export const deleteRole = (id) => async (dispatch) => {
+  const result = await axios.delete(API_URL + `roles/${id}`);
+  dispatch({
+    type: "DELETE_ROLE",
+    payload: result.data,
+  });
+};
