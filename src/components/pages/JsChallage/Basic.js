@@ -3,6 +3,7 @@ import React from "react";
 const Basic = () => {
   const sum = (a, b) => a + b;
   const compare = (a, b) => a === b;
+  const getType = (a) => typeof a;
   return (
     <div>
       <center>
@@ -17,6 +18,15 @@ const Basic = () => {
         <p>{compare(3, 3) ? "yes" : "no"}</p>
         <p>{compare(1, "1") ? "yes" : "no"}</p>
         <p>{compare("10", "10") ? "yes" : "no"}</p>
+      </center>
+      <center>
+        <h1>Get type of value</h1>
+        <p>{getType(1)}</p>
+        <p>{getType(false)}</p>
+        <p>{getType({})}</p>
+        <p>{getType(null)}</p>
+        <p>{getType("string")}</p>
+        <p>{getType(["array"])}</p>
       </center>
     </div>
   );
