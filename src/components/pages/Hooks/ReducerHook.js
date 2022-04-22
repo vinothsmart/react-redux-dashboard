@@ -6,9 +6,18 @@ const ReducerHook = () => {
 
   return (
     <div>
-      <h1>{count}</h1>
-      <button>Click Here</button>
-      {showText && <p>This is a text</p>}
+      <center>
+        <h1>{count}</h1>
+        <button
+          onClick={() => {
+            setCount(count + 1);
+            setShowText(!showText);
+          }}
+        >
+          Click Here
+        </button>
+        {showText && <p>This is a text</p>}
+      </center>
     </div>
   );
 };
