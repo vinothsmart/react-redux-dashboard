@@ -9,6 +9,7 @@ import {
   Testing,
   UpdateRole,
 } from "./pages";
+import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
 
 const AppRouter = () => {
@@ -22,6 +23,7 @@ const AppRouter = () => {
       <Route exact path="/roles/edit/:id" component={UpdateRole} />
       <Route exact path="/count" component={Count} />
       <Route exact path="/hooks/useState" component={StateHook} />
+      <Route exact path="/hooks/useReducer" component={ReducerHook} />
     </Switch>
   );
 };
