@@ -151,28 +151,7 @@ export const Navbar = () => {
           </div>
         </div>
       </header>
-
       <div className="b-example-divider"></div>
-      <nav className="navbar fixed-bottom text-light bg-dark">
-        <div className="container-fluid">
-          <div className="col-lg-12">
-            <center>
-              <p>
-                © 2021 Copyright:
-                <Link
-                  className="text-light"
-                  to={{
-                    pathname: "https://github.com/vinothsmart/",
-                  }}
-                  target="_blank"
-                >
-                  vinothsmart
-                </Link>
-              </p>
-            </center>
-          </div>
-        </div>
-      </nav>
     </>
   );
 };

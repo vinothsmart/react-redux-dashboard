@@ -11,6 +11,7 @@ import {
 } from "./pages";
 import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
+import Basic from "./pages/JsChallage/Basic";
 
 const AppRouter = () => {
   return (
@@ -24,6 +25,7 @@ const AppRouter = () => {
       <Route exact path="/count" component={Count} />
       <Route exact path="/hooks/useState" component={StateHook} />
       <Route exact path="/hooks/useReducer" component={ReducerHook} />
+      <Route exact path="/jsc/basic" component={Basic} />
     </Switch>
   );
 };
