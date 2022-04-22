@@ -8,6 +8,7 @@ const Basic = () => {
   const removeFirstThree = (a) => a.slice(3);
   const removeLastThree = (a) => a.slice(-3);
   const getFirstThree = (a) => a.slice(0, 3);
+  const getFirstHalf = (a) => a.slice(0, a.length / 2);
   return (
     <div>
       <center>
@@ -49,6 +50,18 @@ const Basic = () => {
         <p>{removeLastThree("abcdefg")}</p>
         <p>{removeLastThree("1234")}</p>
         <p>{removeLastThree("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>Get first n characters of string</h1>
+        <p>{getFirstThree("abcdefg")}</p>
+        <p>{getFirstThree("1234")}</p>
+        <p>{getFirstThree("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>Extract first half of string</h1>
+        <p>{getFirstHalf("abcdefg")}</p>
+        <p>{getFirstHalf("1234")}</p>
+        <p>{getFirstHalf("fgedcba")}</p>
       </center>
     </div>
   );
