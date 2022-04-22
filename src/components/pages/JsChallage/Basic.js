@@ -5,6 +5,7 @@ const Basic = () => {
   const compare = (a, b) => a === b;
   const getType = (a) => typeof a;
   const nthChar = (a, n) => a[n - 1];
+  const removeFirstThree = (a) => a.slice(3);
   return (
     <div>
       <center>
@@ -34,6 +35,12 @@ const Basic = () => {
         <p>{nthChar("abcd", 1)}</p>
         <p>{nthChar("zyxbwpl", 5)}</p>
         <p>{nthChar("gfedcba", 3)}</p>
+      </center>
+      <center>
+        <h1>Remove first n characters of string</h1>
+        <p>{removeFirstThree("abcdefg")}</p>
+        <p>{removeFirstThree("1234")}</p>
+        <p>{removeFirstThree("fgedcba")}</p>
       </center>
     </div>
   );
