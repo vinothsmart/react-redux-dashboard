@@ -7,6 +7,7 @@ const Basic = () => {
   const nthChar = (a, n) => a[n - 1];
   const removeFirstThree = (a) => a.slice(3);
   const removeLastThree = (a) => a.slice(-3);
+  const getFirstThree = (a) => a.slice(0, 3);
   return (
     <div>
       <center>
@@ -48,6 +49,12 @@ const Basic = () => {
         <p>{removeLastThree("abcdefg")}</p>
         <p>{removeLastThree("1234")}</p>
         <p>{removeLastThree("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>Get last n characters of string</h1>
+        <p>{getFirstThree("abcdefg")}</p>
+        <p>{getFirstThree("1234")}</p>
+        <p>{getFirstThree("fgedcba")}</p>
       </center>
     </div>
   );
