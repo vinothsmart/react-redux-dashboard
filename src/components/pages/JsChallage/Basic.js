@@ -9,6 +9,9 @@ const Basic = () => {
   const removeLastThree = (a) => a.slice(-3);
   const getFirstThree = (a) => a.slice(0, 3);
   const getFirstHalf = (a) => a.slice(0, a.length / 2);
+  const removeLastThreeChars = (a) => a.slice(0, -3);
+  const percentOf = (a, b) => a * (b / 100);
+
   return (
     <div>
       <center>
@@ -62,6 +65,18 @@ const Basic = () => {
         <p>{getFirstHalf("abcdefg")}</p>
         <p>{getFirstHalf("1234")}</p>
         <p>{getFirstHalf("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>Remove last n characters of string</h1>
+        <p>{removeLastThreeChars("abcdefg")}</p>
+        <p>{removeLastThreeChars("1234")}</p>
+        <p>{removeLastThreeChars("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>Return the percentage of a number</h1>
+        <p>{percentOf(100, 50)}</p>
+        <p>{percentOf(10, 1)}</p>
+        <p>{percentOf(500, 25)}</p>
       </center>
     </div>
   );
