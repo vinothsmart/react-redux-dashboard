@@ -4,6 +4,7 @@ const Basic = () => {
   const sum = (a, b) => a + b;
   const compare = (a, b) => a === b;
   const getType = (a) => typeof a;
+  const nthChar = (a, n) => a[n - 1];
   return (
     <div>
       <center>
@@ -27,6 +28,12 @@ const Basic = () => {
         <p>{getType(null)}</p>
         <p>{getType("string")}</p>
         <p>{getType(["array"])}</p>
+      </center>
+      <center>
+        <h1>Get nth character of string</h1>
+        <p>{nthChar("abcd", 1)}</p>
+        <p>{nthChar("zyxbwpl", 5)}</p>
+        <p>{nthChar("gfedcba", 3)}</p>
       </center>
     </div>
   );
