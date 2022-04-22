@@ -50,12 +50,6 @@ const Basic = () => {
         <p>{removeLastThree("1234")}</p>
         <p>{removeLastThree("fgedcba")}</p>
       </center>
-      <center>
-        <h1>Get last n characters of string</h1>
-        <p>{getFirstThree("abcdefg")}</p>
-        <p>{getFirstThree("1234")}</p>
-        <p>{getFirstThree("fgedcba")}</p>
-      </center>
     </div>
   );
 };
