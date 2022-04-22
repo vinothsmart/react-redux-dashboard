@@ -1,7 +1,8 @@
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const arr = ["a", "a", "a", "b", "b", "c", "c", "c"];
+  // ["a","a","a","b","b","c","c","c","c"] -------> {a:3,b:2,c:4}
+  const arr = ["a", "a", "a", "b", "b", "c", "c", "c", "c"];
 
   const result = arr.reduce((obj, item) => {
     if (obj[item]) {
