@@ -3,7 +3,6 @@ import { Navbar } from "./components";
 import { Provider } from "react-redux";
 import store from "./store";
 import AppRouter from "./components/AppRouter";
-import Footer from "./components/elements/Footer";
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
         <div className="App">
           <Navbar />
           <AppRouter />
-          <Footer />
         </div>
       </Router>
     </Provider>
