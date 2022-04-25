@@ -110,6 +110,7 @@ export const Navbar = () => {
                 id="dropdownUser1"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                to=""
               >
                 <img
                   src="https://github.com/mdo.png"

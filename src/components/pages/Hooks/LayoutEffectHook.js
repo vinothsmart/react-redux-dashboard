@@ -1,13 +1,25 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 
 const LayoutEffectHook = () => {
+  const inputRef = useRef(null);
   useLayoutEffect(() => {
-    console.log("LayoutEffectHook");
+    console.log(inputRef.current.value);
   }, []);
   useEffect(() => {
-    console.log("useEffect");
+    inputRef.current.value = "Hello";
   }, []);
-  return <div>LayoutEffectHook</div>;
+  return (
+    <div>
+      <input
+        ref={inputRef}
+        value="vinoth"
+        style={{
+          width: 400,
+          height: 40,
+        }}
+      />
+    </div>
+  );
 };
 
 export default LayoutEffectHook;
