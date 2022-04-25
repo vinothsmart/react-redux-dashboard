@@ -10,6 +10,7 @@ import {
   UpdateRole,
 } from "./pages";
 import EffectHook from "./pages/Hooks/EffectHook";
+import RefHook from "./pages/Hooks/RefHook";
 import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
 import Basic from "./pages/JsChallage/Basic";
@@ -27,6 +28,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useState" component={StateHook} />
       <Route exact path="/hooks/useReducer" component={ReducerHook} />
       <Route exact path="/hooks/useEffect" component={EffectHook} />
+      <Route exact path="/hooks/useRef" component={RefHook} />
       <Route exact path="/jsc/basic" component={Basic} />
     </Switch>
   );
