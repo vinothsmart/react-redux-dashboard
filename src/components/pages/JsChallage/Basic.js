@@ -19,8 +19,17 @@ const Basic = () => {
     const powerOf = divide ** f;
     return powerOf;
   };
-
   const checkEven = (a) => a % 2 === 0;
+
+  const checkChar = (a, b) => {
+    let result = 0;
+    for (let i = 0; i < b.length; i++) {
+      if (a === b[i]) {
+        result++;
+      }
+    }
+    return result;
+  };
 
   return (
     <div>
@@ -100,6 +109,33 @@ const Basic = () => {
         <p>{checkEven(-4) ? "true" : "false"}</p>
         <p>{checkEven(5) ? "true" : "false"}</p>
         <p>{checkEven(-111) ? "true" : "false"}</p>
+      </center>
+      <center>
+        <h1>How many times does a character occur?</h1>
+        <p>
+          {checkChar(
+            "m",
+            "how many times does the character occur in this sentence?"
+          )}
+        </p>
+        <p>
+          {checkChar(
+            "h",
+            "how many times does the character occur in this sentence?"
+          )}
+        </p>
+        <p>
+          {checkChar(
+            "?",
+            "how many times does the character occur in this sentence?"
+          )}
+        </p>
+        <p>
+          {checkChar(
+            "z",
+            "how many times does the character occur in this sentence?"
+          )}
+        </p>
       </center>
     </div>
   );
