@@ -11,6 +11,14 @@ const Basic = () => {
   const getFirstHalf = (a) => a.slice(0, a.length / 2);
   const removeLastThreeChars = (a) => a.slice(0, -3);
   const percentOf = (a, b) => a * (b / 100);
+  const basicMath = (a, b, c, d, e, f) => {
+    const sum = a + b;
+    const sub = sum - c;
+    const mult = sub * d;
+    const divide = mult / e;
+    const powerOf = divide ** f;
+    return powerOf;
+  };
 
   return (
     <div>
@@ -77,6 +85,12 @@ const Basic = () => {
         <p>{percentOf(100, 50)}</p>
         <p>{percentOf(10, 1)}</p>
         <p>{percentOf(500, 25)}</p>
+      </center>
+      <center>
+        <h1>Basic JavaScript math operators</h1>
+        <p>{basicMath(6, 5, 4, 3, 2, 1)}</p>
+        <p>{basicMath(6, 2, 1, 4, 2, 3)}</p>
+        <p>{basicMath(2, 3, 6, 4, 2, 3)}</p>
       </center>
     </div>
   );
