@@ -20,6 +20,8 @@ const Basic = () => {
     return powerOf;
   };
 
+  const checkEven = (a) => a % 2 === 0;
+
   return (
     <div>
       <center>
@@ -30,10 +32,10 @@ const Basic = () => {
       </center>
       <center>
         <h1>Comparison operators, strict equality</h1>
-        <p>{compare(2, 3) ? "yes" : "no"}</p>
-        <p>{compare(3, 3) ? "yes" : "no"}</p>
-        <p>{compare(1, "1") ? "yes" : "no"}</p>
-        <p>{compare("10", "10") ? "yes" : "no"}</p>
+        <p>{compare(2, 3) ? "true" : "false"}</p>
+        <p>{compare(3, 3) ? "true" : "false"}</p>
+        <p>{compare(1, "1") ? "true" : "false"}</p>
+        <p>{compare("10", "10") ? "true" : "false"}</p>
       </center>
       <center>
         <h1>Get type of value</h1>
@@ -91,6 +93,13 @@ const Basic = () => {
         <p>{basicMath(6, 5, 4, 3, 2, 1)}</p>
         <p>{basicMath(6, 2, 1, 4, 2, 3)}</p>
         <p>{basicMath(2, 3, 6, 4, 2, 3)}</p>
+      </center>
+      <center>
+        <h1>Check if a number is even</h1>
+        <p>{checkEven(10) ? "true" : "false"}</p>
+        <p>{checkEven(-4) ? "true" : "false"}</p>
+        <p>{checkEven(5) ? "true" : "false"}</p>
+        <p>{checkEven(-111) ? "true" : "false"}</p>
       </center>
     </div>
   );
