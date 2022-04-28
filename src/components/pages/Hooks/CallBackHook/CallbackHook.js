@@ -3,7 +3,7 @@ import Child from "./Child";
 
 const CallbackHook = () => {
   const [toggle, setToggle] = useState(false);
-  const [data, setData] = useState("hi Vinoth");
+  const [data] = useState("hi Vinoth");
 
   const printName = useCallback(
     (name) => {
