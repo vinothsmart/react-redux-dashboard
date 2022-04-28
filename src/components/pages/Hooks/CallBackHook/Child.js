@@ -4,7 +4,7 @@ const Child = ({ printName }) => {
   useEffect(() => {
     console.log("Function is Called");
   }, [printName]);
-  return <div>{printName()}</div>;
+  return <div>{printName("Kanna")}</div>;
 };
 
 export default Child;

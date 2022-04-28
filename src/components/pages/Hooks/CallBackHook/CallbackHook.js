@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Child from "./Child";
 
 const CallbackHook = () => {
   const [toggle, setToggle] = useState(false);
   const [data, setData] = useState("hi Vinoth");
 
-  const printName = () => {
-    return data;
-  };
+  const printName = useCallback(
+    (name) => {
+      return data + name;
+    },
+    [data]
+  );
   return (
     <div>
       <Child printName={printName} />
