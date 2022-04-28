@@ -14,6 +14,24 @@ export const Testing = () => {
   }, {});
   console.log(result);
 
+  const numbers = [1, 3, 4];
+
+  const sumNum = numbers.reduce((acc, curr) => acc + curr);
+
+  console.log(sumNum);
+  let tot = 0;
+  numbers.map((num) => {
+    return (tot += num);
+  });
+  console.log(tot);
+
+  const lllnames = ["Alamelumnagai", "vinoth"];
+  const longes = lllnames.reduce((preVal, curreVal) => {
+    return preVal.length > curreVal.length ? preVal : curreVal;
+  });
+
+  console.log(longes);
+
   return (
     <>
       <SeoTool
