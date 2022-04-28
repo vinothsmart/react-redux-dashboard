@@ -18,6 +18,7 @@ import LayoutEffectHook from "./pages/Hooks/LayoutEffectHook";
 import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeHandleHook";
 import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
 import MemoHook from "./pages/Hooks/MemoHook";
+import CallbackHook from "./pages/Hooks/CallBackHook/CallbackHook";
 
 const AppRouter = () => {
   return (
@@ -41,6 +42,7 @@ const AppRouter = () => {
       />
       <Route exact path="/hooks/useContext" component={ContextHook} />
       <Route exact path="/hooks/useMemo" component={MemoHook} />
+      <Route exact path="/hooks/useCallback" component={CallbackHook} />
       <Route exact path="/jsc/basic" component={Basic} />
     </Switch>
   );
