@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 
 const MemoHook = () => {
   const [data, setData] = useState(null);
@@ -26,9 +26,11 @@ const MemoHook = () => {
     return longestName;
   };
 
+  const getLongestName = useMemo(() => findLognestName(data), [data]);
+
   return (
     <div>
-      <h1>{findLognestName(data)}</h1>
+      <h1>{getLongestName}</h1>
       <button onClick={() => setToggle(!toggle)}>Toggle</button>
     </div>
   );
