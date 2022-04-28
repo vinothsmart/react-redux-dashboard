@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import Login from "./Login";
 import User from "./User";
 
+export const UserContext = createContext(null);
+
 const ContextHook = () => {
   const [userName, setUserName] = useState("");
+
   return (
     <div>
-      <Login setUserName={setUserName} />
-      <User userName={userName} />
+      <UserContext.Provider value={{ userName, setUserName }}>
+        <Login />
+        <User />
+      </UserContext.Provider>
     </div>
   );
 };

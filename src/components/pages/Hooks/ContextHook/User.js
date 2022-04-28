@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "./ContextHook";
 
-const User = ({ userName }) => {
+const User = () => {
+  const { userName } = useContext(UserContext);
   return (
     <div>
       <h1>User : {userName}</h1>
