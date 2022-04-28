@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Button from "./Component/Button";
+import Button from "./Button";
 
 const ImperativeHandleHook = () => {
   const buttonRef = useRef(null);

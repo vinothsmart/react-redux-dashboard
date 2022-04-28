@@ -15,7 +15,8 @@ import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
 import Basic from "./pages/JsChallage/Basic";
 import LayoutEffectHook from "./pages/Hooks/LayoutEffectHook";
-import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook";
+import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeHandleHook";
+import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
 
 const AppRouter = () => {
   return (
@@ -37,6 +38,7 @@ const AppRouter = () => {
         path="/hooks/useImperativeHandle"
         component={ImperativeHandleHook}
       />
+      <Route exact path="/hooks/useContext" component={ContextHook} />
       <Route exact path="/jsc/basic" component={Basic} />
     </Switch>
   );
