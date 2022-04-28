@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 const MemoHook = () => {
   const [data, setData] = useState(null);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/comments").then((res) => {
@@ -28,6 +29,7 @@ const MemoHook = () => {
   return (
     <div>
       <h1>{findLognestName(data)}</h1>
+      <button onClick={() => setToggle(!toggle)}>Toggle</button>
     </div>
   );
 };
