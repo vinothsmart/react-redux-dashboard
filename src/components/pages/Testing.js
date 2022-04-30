@@ -1,36 +1,25 @@
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  // ["a","a","a","b","b","c","c","c","c"] -------> {a:3,b:2,c:4}
-  const arr = ["a", "a", "a", "b", "b", "c", "c", "c", "c"];
+  // Function Curring
+  //  add (1,2) => 3
+  //  add (1)(2) => 3 how to write the functon
 
-  const result = arr.reduce((obj, item) => {
-    if (obj[item]) {
-      obj[item]++;
-    } else {
-      obj[item] = 1;
-    }
-    return obj;
-  }, {});
-  console.log(result);
+  // normal func
+  function add(a, b) {
+    return a + b;
+  }
+  console.log(add(1, 2));
 
-  const numbers = [1, 3, 4];
-
-  const sumNum = numbers.reduce((acc, curr) => acc + curr);
-
-  console.log(sumNum);
-  let tot = 0;
-  numbers.map((num) => {
-    return (tot += num);
-  });
-  console.log(tot);
-
-  const lllnames = ["Alamelumnagai", "vinoth"];
-  const longes = lllnames.reduce((preVal, curreVal) => {
-    return preVal.length > curreVal.length ? preVal : curreVal;
-  });
-
-  console.log(longes);
+  // curring func
+  function curringAdd(a) {
+    // a is accesing from outer scope
+    // closure applided for value of a
+    return function (b) {
+      return a + b;
+    };
+  }
+  console.log(curringAdd(1)(2));
 
   return (
     <>
