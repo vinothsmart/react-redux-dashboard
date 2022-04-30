@@ -17,13 +17,16 @@ const reducer = (state, action) => {
   }
 };
 
+// initial state
+const intialValues = {
+  count: 0,
+  showText: true,
+};
+
 const ReducerHook = () => {
   const [state, dispatch] = useReducer(
     reducer, // reducer function
-    {
-      count: 0,
-      showText: true,
-    } // initial state
+    intialValues // initial state
   );
   return (
     <div>
