@@ -19,6 +19,7 @@ import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeH
 import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
 import MemoHook from "./pages/Hooks/MemoHook";
 import CallbackHook from "./pages/Hooks/CallBackHook/CallbackHook";
+import Prepare from "./pages/Prepare";
 
 const AppRouter = () => {
   return (
@@ -44,6 +45,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useMemo" component={MemoHook} />
       <Route exact path="/hooks/useCallback" component={CallbackHook} />
       <Route exact path="/jsc/basic" component={Basic} />
+      <Route exact path="/jsprepare/" component={Prepare} />
     </Switch>
   );
 };
