@@ -1,8 +1,12 @@
 const Part1 = () => {
   // Map
-  // Filter
   let a = [1, 2, 3, 4];
 
+  a.forEach((item, index) => {
+    console.log(item);
+    console.log(index);
+    console.log("----------");
+  });
   a.map((item, index) => {
     console.log(item);
     console.log(index);
