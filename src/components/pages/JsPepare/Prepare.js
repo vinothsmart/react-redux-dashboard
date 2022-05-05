@@ -3,17 +3,23 @@ const Part1 = () => {
   const a = [1, 2, 3, 4];
 
   // for loop is equal to foreach
+  // foreach alernative
   for (let i = 0; i < a.length; i++) {
-    console.log(a[i]);
+    console.log("for", a[i]);
   }
 
   a.forEach((item, index) => {
-    return item;
+    console.log("foreach", item);
   });
 
-  const c = a.map((item, index) => {
-    return item * 2;
-  });
+  // map alternative
+  const arr = [];
+  for (let i = 0; i < a.length; i++) {
+    arr.push(a[i]);
+  }
+  console.log("mapalter", arr);
+
+  const c = a.map((item, index) => item * 2);
 
   // print with condition even numbers
   const d = a.filter((item, index) => {
@@ -27,8 +33,8 @@ const Part1 = () => {
   // map is return the new array
   // filter is return the also new array
   // console.log(b);
-  console.log(c);
-  console.log(d);
+  console.log("map", c);
+  console.log("filter", d);
 
   //a.map((item, index) => {});  [undefined, undefined, undefined, undefined] map run current length of array
   //a.filter((item, index) => {});  [] filter create new array with condition then push to new array
