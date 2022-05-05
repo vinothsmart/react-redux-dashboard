@@ -1,4 +1,4 @@
-const Prepare = () => {
+const Part1 = () => {
   // Map
   // Filter
   let a = [1, 2, 3, 4];
@@ -8,7 +8,7 @@ const Prepare = () => {
     console.log(index);
     console.log("----------");
   });
-  return <div>Prepare</div>;
+  return <div>Part1</div>;
 };
 
-export default Prepare;
+export default Part1;
