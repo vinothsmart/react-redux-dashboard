@@ -21,15 +21,7 @@ const Basic = () => {
   };
   const checkEven = (a) => a % 2 === 0;
 
-  const checkChar = (a, b) => {
-    let result = 0;
-    for (let i = 0; i < b.length; i++) {
-      if (a === b[i]) {
-        result++;
-      }
-    }
-    return result;
-  };
+  const checkChar = (a, b) => b.split(a).length - 1;
 
   return (
     <div>
