@@ -46,6 +46,13 @@ const Part1 = () => {
   const studentMark = [60, 40, 20, 70, 90];
   const result = studentMark.filter((item) => item > 30);
   console.log(result);
+
+  const resultEvery = studentMark.every((item) => item > 30);
+  console.log(resultEvery);
+
+  const resultSome = studentMark.some((item) => item > 30);
+  console.log(resultSome);
+
   return <div>Part1</div>;
 };
 
