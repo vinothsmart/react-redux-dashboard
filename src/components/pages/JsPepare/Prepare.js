@@ -6,13 +6,9 @@ const Part1 = () => {
     return item;
   });
 
-  const c = a.map((item, index) => {
-    return item;
-  });
+  const c = a.map((item, index) => {});
 
-  const d = a.filter((item, index) => {
-    return item;
-  });
+  const d = a.filter((item, index) => {});
 
   // Diff foreach and map
   // foreach is loop the array not return anything
@@ -21,6 +17,9 @@ const Part1 = () => {
   console.log(b);
   console.log(c);
   console.log(d);
+
+  //a.map((item, index) => {});  [undefined, undefined, undefined, undefined] map run current length of array
+  //a.filter((item, index) => {});  [] filter create new array with condition then push to new array
 
   return <div>Part1</div>;
 };
