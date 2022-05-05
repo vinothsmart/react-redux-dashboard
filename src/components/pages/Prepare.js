@@ -1,10 +1,13 @@
 const Prepare = () => {
   // Map
   // Filter
-  let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let a = [1, 2, 3, 4];
 
-  console.log(a.map((item) => item * 2));
-
+  a.map((item, index) => {
+    console.log(item);
+    console.log(index);
+    console.log("----------");
+  });
   return <div>Prepare</div>;
 };
 
