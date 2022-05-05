@@ -39,6 +39,13 @@ const Part1 = () => {
   //a.map((item, index) => {});  [undefined, undefined, undefined, undefined] map run current length of array
   //a.filter((item, index) => {});  [] filter create new array with condition then push to new array
 
+  // task
+  const x = ["VinothKanna", "Alamelumangai"];
+  const y = x.map((item) => item);
+  console.log(y);
+  const studentMark = [60, 40, 20, 70, 90];
+  const result = studentMark.filter((item) => item > 30);
+  console.log(result);
   return <div>Part1</div>;
 };
 
