@@ -2,19 +2,31 @@ const Part1 = () => {
   // Map
   const a = [1, 2, 3, 4];
 
-  const b = a.forEach((item, index) => {
+  // for loop is equal to foreach
+  for (let i = 0; i < a.length; i++) {
+    console.log(a[i]);
+  }
+
+  a.forEach((item, index) => {
     return item;
   });
 
-  const c = a.map((item, index) => {});
+  const c = a.map((item, index) => {
+    return item * 2;
+  });
 
-  const d = a.filter((item, index) => {});
+  // print with condition even numbers
+  const d = a.filter((item, index) => {
+    if (item % 2 === 0) {
+      return item;
+    }
+  });
 
   // Diff foreach and map
   // foreach is loop the array not return anything
   // map is return the new array
   // filter is return the also new array
-  console.log(b);
+  // console.log(b);
   console.log(c);
   console.log(d);
 
