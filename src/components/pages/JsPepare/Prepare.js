@@ -26,6 +26,7 @@ const Part1 = () => {
     if (item % 2 === 0) {
       return item;
     }
+    return null;
   });
 
   // Diff foreach and map
