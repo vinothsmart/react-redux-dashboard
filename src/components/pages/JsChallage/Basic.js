@@ -2,15 +2,25 @@ import React from "react";
 
 const Basic = () => {
   const sum = (a, b) => a + b;
+
   const compare = (a, b) => a === b;
+
   const getType = (a) => typeof a;
+
   const nthChar = (a, n) => a[n - 1];
+
   const removeFirstThree = (a) => a.slice(3);
+
   const removeLastThree = (a) => a.slice(-3);
+
   const getFirstThree = (a) => a.slice(0, 3);
+
   const getFirstHalf = (a) => a.slice(0, a.length / 2);
+
   const removeLastThreeChars = (a) => a.slice(0, -3);
+
   const percentOf = (a, b) => a * (b / 100);
+
   const basicMath = (a, b, c, d, e, f) => {
     const sum = a + b;
     const sub = sum - c;
@@ -19,17 +29,14 @@ const Basic = () => {
     const powerOf = divide ** f;
     return powerOf;
   };
+
   const checkEven = (a) => a % 2 === 0;
 
-  const checkChar = (a, b) => {
-    let result = 0;
-    for (let i = 0; i < b.length; i++) {
-      if (a === b[i]) {
-        result++;
-      }
-    }
-    return result;
-  };
+  const checkChar = (a, b) => b.split(a).length - 1;
+
+  const checkWholeNumber = (a) => a % 1 === 0;
+
+  const multipleDivision = (a, b) => (a < b ? a / b : a * b);
 
   return (
     <div>
@@ -136,6 +143,20 @@ const Basic = () => {
             "how many times does the character occur in this sentence?"
           )}
         </p>
+      </center>
+      <center>
+        <h1>Check if a number is a whole number</h1>
+        <p>{checkWholeNumber(4) ? "true" : "false"}</p>
+        <p>{checkWholeNumber(1.123) ? "true" : "false"}</p>
+        <p>{checkWholeNumber(1048) ? "true" : "false"}</p>
+        <p>{checkWholeNumber(10.48) ? "true" : "false"}</p>
+      </center>
+      <center>
+        <h1>Multiplication, division, and comparison operators</h1>
+        <p>{multipleDivision(10, 100)}</p>
+        <p>{multipleDivision(90, 45)}</p>
+        <p>{multipleDivision(8, 20)}</p>
+        <p>{multipleDivision(2, 0.5)}</p>
       </center>
     </div>
   );
