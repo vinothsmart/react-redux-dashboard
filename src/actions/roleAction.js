@@ -31,11 +31,17 @@ export const createRole = (role) => async (dispatch) => {
 
 // update a role
 export const updateRole = (role) => async (dispatch) => {
-  const result = await axios.put(API_URL + `roles/${role.id}`, role);
-  dispatch({
-    type: "UPDATE_ROLE",
-    payload: result.data,
-  });
+  await axios
+    .put(API_URL + `roles/${role.id}`, role)
+    .then((res) => {
+      dispatch({
+        type: "UPDATE_ROLE",
+        payload: res.data,
+      });
+    })
+    .catch((err) => {
+      console.log(err.response.data);
+    });
 };
 // delete a role
 export const deleteRole = (id) => async (dispatch) => {
