@@ -31,28 +31,28 @@ export const createRole = (role) => async (dispatch) => {
 
 // update a role
 export const updateRole = (role) => async (dispatch) => {
-  // await axios
-  //   .put(API_URL + `roles/${role.id}`, role)
-  //   .then((response) => {
-  //     dispatch({
-  //       type: "UPDATE_ROLE",
-  //       payload: response.data,
-  //     });
-  //   })
-  //   .catch((err) => {
-  //     console.log(err.response.data);
-  //   });
-  // handle error here using promise as done in the above code
-  try {
-    const result = await axios.put(API_URL + `roles/${role.id}`, role);
-    dispatch({
-      type: "UPDATE_ROLE",
-      payload: result.data,
+  await axios
+    .put(API_URL + `roles/${role.id}`, role)
+    .then((response) => {
+      dispatch({
+        type: "UPDATE_ROLE",
+        payload: response.data,
+      });
+    })
+    .catch((err) => {
+      console.log(err.response.data);
     });
-    return Promise.resolve(result.data);
-  } catch (error) {
-    return console.log(error.response.data);
-  }
+  // handle error here using promise as done in the above code
+  // try {
+  //   const result = await axios.put(API_URL + `roles/${role.id}`, role);
+  //   dispatch({
+  //     type: "UPDATE_ROLE",
+  //     payload: result.data,
+  //   });
+  //   return Promise.resolve(result.data);
+  // } catch (error) {
+  //   return console.log(error.response.data);
+  // }
 };
 // delete a role
 export const deleteRole = (id) => async (dispatch) => {
