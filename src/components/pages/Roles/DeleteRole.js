@@ -1,6 +1,5 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { deleteRole } from "../../../actions";
 
 const DeleteRole = ({ id }) => {
@@ -9,9 +8,9 @@ const DeleteRole = ({ id }) => {
     dispatch(deleteRole(id));
   }, [dispatch, id]);
   return (
-    <Link onClick={handleDelete}>
-      <span className="material-icons btn-danger">remove_circle</span>
-    </Link>
+    <span onClick={handleDelete} className="material-icons btn-danger">
+      remove_circle
+    </span>
   );
 };
 
