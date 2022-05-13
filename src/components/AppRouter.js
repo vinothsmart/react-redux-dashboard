@@ -19,7 +19,8 @@ import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeH
 import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
 import MemoHook from "./pages/Hooks/MemoHook";
 import CallbackHook from "./pages/Hooks/CallBackHook/CallbackHook";
-import Part1 from "./pages/JsPepare/Prepare";
+import Part1 from "./pages/JsPepare/Part1";
+import Part2 from "./pages/JsPepare/Part2";
 
 const AppRouter = () => {
   return (
@@ -46,6 +47,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useCallback" component={CallbackHook} />
       <Route exact path="/jsc/basic" component={Basic} />
       <Route exact path="/jsprepare/Part1" component={Part1} />
+      <Route exact path="/jsprepare/Part2" component={Part2} />
     </Switch>
   );
 };
