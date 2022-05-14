@@ -19,7 +19,7 @@ const Basic = () => {
 
   const removeLastThreeChars = (a) => a.slice(0, -3);
 
-  const percentOf = (a, b) => a * (b / 100);
+  const percentOf = (a, b) => (b / 100) * a;
 
   const basicMath = (a, b, c, d, e, f) => {
     const sum = a + b;
