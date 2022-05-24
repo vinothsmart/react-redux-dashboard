@@ -22,6 +22,7 @@ import CallbackHook from "./pages/Hooks/CallBackHook/CallbackHook";
 import Part1 from "./pages/JsPepare/Part1";
 import Part2 from "./pages/JsPepare/Part2";
 import Part3 from "./pages/JsPepare/Part3";
+import Part4 from "./pages/JsPepare/Part4";
 
 const AppRouter = () => {
   return (
@@ -50,6 +51,7 @@ const AppRouter = () => {
       <Route exact path="/jsprepare/Part1" component={Part1} />
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />
+      <Route exact path="/jsprepare/Part4" component={Part4} />
     </Switch>
   );
 };
