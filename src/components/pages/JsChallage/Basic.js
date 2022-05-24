@@ -19,16 +19,9 @@ const Basic = () => {
 
   const removeLastThreeChars = (a) => a.slice(0, -3);
 
-  const percentOf = (a, b) => a * (b / 100);
+  const percentOf = (a, b) => (b / 100) * a;
 
-  const basicMath = (a, b, c, d, e, f) => {
-    const sum = a + b;
-    const sub = sum - c;
-    const mult = sub * d;
-    const divide = mult / e;
-    const powerOf = divide ** f;
-    return powerOf;
-  };
+  const basicMath = (a, b, c, d, e, f) => (((a + b - c) * d) / e) ** f;
 
   const checkEven = (a) => a % 2 === 0;
 
