@@ -19,6 +19,14 @@ const Part4 = () => {
   console.log(String(undefined)); //4
   console.log(String(null)); //5
 
+  // falsy => "", 0, -0, NaN, null, undefined, false
+
+  // other than that all are truthy values
+  console.log(!0);
+  console.log(!-0);
+  console.log(!NaN);
+  console.log(!null);
+
   return <div>Part4</div>;
 };
 
