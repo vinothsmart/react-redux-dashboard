@@ -23,6 +23,7 @@ import Part1 from "./pages/JsPepare/Part1";
 import Part2 from "./pages/JsPepare/Part2";
 import Part3 from "./pages/JsPepare/Part3";
 import Part4 from "./pages/JsPepare/Part4";
+import Part5 from "./pages/JsPepare/Part5";
 
 const AppRouter = () => {
   return (
@@ -52,6 +53,7 @@ const AppRouter = () => {
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />
       <Route exact path="/jsprepare/Part4" component={Part4} />
+      <Route exact path="/jsprepare/Part5" component={Part5} />
     </Switch>
   );
 };
