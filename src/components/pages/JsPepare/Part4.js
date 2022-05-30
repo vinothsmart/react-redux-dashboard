@@ -39,6 +39,8 @@ const Part4 = () => {
   console.log(Boolean(1)); //8
   console.log(Boolean("abc")); //9
 
+  console.log("values");
+
   return <div>Part4</div>;
 };
 
