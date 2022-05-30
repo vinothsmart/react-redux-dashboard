@@ -27,6 +27,18 @@ const Part4 = () => {
   console.log(!NaN);
   console.log(!null);
 
+  console.log("checking");
+  console.log(Boolean(false)); //1
+  console.log(Boolean(0)); //2
+  console.log(Boolean(-0)); //3
+  console.log(Boolean([])); //4
+  console.log(Boolean(NaN)); //5
+  console.log(Boolean(undefined)); //6
+  console.log(Boolean(null)); //7
+
+  console.log(Boolean(1)); //8
+  console.log(Boolean("abc")); //9
+
   return <div>Part4</div>;
 };
 
