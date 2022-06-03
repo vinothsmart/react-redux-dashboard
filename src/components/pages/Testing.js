@@ -15,7 +15,13 @@ export const Testing = () => {
   ];
 
   // remove duplicate
-  const uniqueNames = [...new Set(names.map((item) => item.name))];
+  const uniqueNames = names.reduce((acc, curr) => {
+    if (!acc.includes(curr.name)) {
+      acc.push(curr.name);
+    }
+    return acc;
+  }, []);
+
   console.log(uniqueNames);
 
   return (
