@@ -2,17 +2,11 @@ import { useCallback, useState } from "react";
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const vinoth = [1, 2, 3, 4, 5];
-  const n = 0;
-  // output 3,4,5,1,2
+  const checkNull = typeof null;
+  const ssss = typeof undefined;
 
-  const getNValue = vinoth.splice(0, n);
-  const getRemainingValues = vinoth.splice(vinoth.length - n, n);
-
-  const result = [...getRemainingValues, ...getNValue];
-
-  console.log(result);
-
+  console.log(checkNull);
+  console.log(ssss);
   return (
     <>
       <SeoTool
