@@ -2,25 +2,21 @@ import { useCallback, useState } from "react";
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
+  const names = [
+    {
+      name: "Ganesh",
+    },
+    {
+      name: "Vinoth",
+    },
+    {
+      name: "Ganesh",
+    },
+  ];
 
-  const [showUserData, setShowUserData] = useState(false);
-
-  const handleChange = useCallback((e) => {
-    const { name, value } = e.target;
-    setUserData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  }, []);
-
-  const handleSumbit = useCallback(() => {
-    setShowUserData(true);
-  }, []);
+  // remove duplicate
+  const uniqueNames = [...new Set(names.map((item) => item.name))];
+  console.log(uniqueNames);
 
   return (
     <>
@@ -32,17 +28,6 @@ export const Testing = () => {
       <div className="container">
         <div className="py-4">
           <h1> Testing Page</h1>
-          <input type="text" name="userName" onChange={handleChange} />
-          <input type="text" name="userAge" onChange={handleChange} />
-          <input type="text" name="userPhone" onChange={handleChange} />
-          <button onClick={handleSumbit}>add</button>
-          {showUserData && (
-            <div>
-              <p>Name : {userData.name}</p>
-              <p>Age : {userData.userAge}</p>
-              <p>Phone : {userData.userPhone}</p>
-            </div>
-          )}
         </div>
       </div>
     </>
