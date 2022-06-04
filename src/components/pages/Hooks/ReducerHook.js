@@ -28,18 +28,15 @@ const ReducerHook = () => {
     reducer, // reducer function
     intialValues // initial state
   );
+  const handleClick = () => {
+    dispatch({ type: "INCREMENT" });
+    dispatch({ type: "toggleShowText" });
+  };
   return (
     <div>
       <center>
         <h1>{state.count}</h1>
-        <button
-          onClick={() => {
-            dispatch({ type: "INCREMENT" });
-            dispatch({ type: "toggleShowText" });
-          }}
-        >
-          Click Here
-        </button>
+        <button onClick={handleClick}>Click Here</button>
         {state.showText && <p>This is a text</p>}
       </center>
     </div>
