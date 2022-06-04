@@ -1,38 +1,13 @@
-import { useState } from "react";
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const names = ["m", "h", "S"];
+  const numbers = [1, 2, 3, 4, 5];
+  const n = 0;
+  const removNumberByN = numbers.slice(n);
+  const getValuesByN = numbers.splice(0, n);
 
-  const findM = names.find((name) => name === "m");
-
-  console.log(findM);
-
-  function multipleBySum(sum) {
-    return sum * 2;
-  }
-
-  function operation(num1, num2, operation) {
-    let sum = num1 + num2;
-    return operation(sum);
-  }
-
-  operation(5, 5, multipleBySum);
-
-  let vvv = "vinoth";
-
-  if (vvv === undefined) {
-    console.log("no value");
-  } else {
-    console.log("have value");
-  }
-
-  const [name, setName] = useState("vinoth");
-
-  const handleChange = () => {
-    setName("Kanna");
-  };
-
+  const newNumbers = [...removNumberByN, ...getValuesByN];
+  console.log(newNumbers);
   return (
     <>
       <SeoTool
