@@ -2,9 +2,9 @@ import { SeoTool } from "../elements";
 
 export const Testing = () => {
   const numbers = [1, 2, 3, 4, 5];
-  const n = 0;
+  const n = 2;
   const removNumberByN = numbers.slice(n);
-  const getValuesByN = numbers.splice(0, n);
+  const getValuesByN = numbers.slice(0, n);
 
   const newNumbers = [...removNumberByN, ...getValuesByN];
   console.log(newNumbers);
