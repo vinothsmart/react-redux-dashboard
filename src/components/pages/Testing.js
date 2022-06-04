@@ -1,13 +1,17 @@
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const numbers = [1, 2, 3, 4, 5];
-  const n = 2;
-  const removNumberByN = numbers.slice(n);
-  const getValuesByN = numbers.slice(0, n);
+  const mutlipby2 = (x) => x * 2;
 
-  const newNumbers = [...removNumberByN, ...getValuesByN];
-  console.log(newNumbers);
+  const total = (n1, n2, callBackFunc) => {
+    const sum = n1 + n2;
+    return callBackFunc(sum);
+  };
+
+  const result = total(5, 5, mutlipby2);
+
+  console.log(result);
+
   return (
     <>
       <SeoTool
