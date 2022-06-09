@@ -1,17 +1,16 @@
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const mutlipby2 = (x) => x * 2;
+  const name = "vinothkanaa";
 
-  const total = (n1, n2, callBackFunc) => {
-    const sum = n1 + n2;
-    return callBackFunc(sum);
-  };
+  // reverse the name
+  const reverseName = name
+    .split("")
+    .map((item) => item)
+    .reverse()
+    .join("");
 
-  const result = total(5, 5, mutlipby2);
-
-  console.log(result);
-
+  console.log(reverseName);
   return (
     <>
       <SeoTool
