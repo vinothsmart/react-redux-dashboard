@@ -3,42 +3,30 @@ import { useState } from "react";
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  // var a = [ a, b, c,d,b,c,e,c]
+  // Write React JS Application to create Two TextField  One Name Other City and One Submit Button ,When user enter the value Name,City and CliCk Submit Button then value print it
 
-  // const arrayList = ["a", "b", "c", "d", "b", "c", "e", "c"];
+  const [values, setValues] = useState({
+    name: "",
+    city: "",
+  });
 
-  // const result = arrayList.reduce((acc, curr) => {
-  //   if (acc[curr]) {
-  //     acc[curr]++;
-  //   } else {
-  //     acc[curr] = 1;
-  //   }
-  //   return acc;
-  // }, {});
+  const handleChange = useCallback((e) => {
+    // setValues({
+    //   [e.target.name]: e.target.value,
+    // });
+    setValues((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  }, []);
 
-  // console.log(result);
-
-  // var a = [15, 27, 43, 65];
-
-  // var second = 0;
-
-  // for (var i = 0; i < a.length - 1; i++) {
-  //   if (a[i] > second) {
-  //     second = a[i];
-  //   }
-  // }
-
-  // console.log(second);
-
-  const [count, setCount] = useState(0);
-
-  const handleClick = useCallback(() => {
-    setCount(count + 1);
-  }, [count]);
-
-  const handleDecremClick = useCallback(() => {
-    setCount(count - 1);
-  }, [count]);
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      console.log(values);
+    },
+    [values]
+  );
 
   return (
     <>
@@ -50,9 +38,19 @@ export const Testing = () => {
       <div className="container">
         <div className="py-4">
           <h1> Testing Page</h1>
-          <h2>{count}</h2>
-          <button onClick={handleClick}> Increment</button>
-          <button onClick={handleDecremClick}> Decrement</button>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            onChange={handleChange}
+          />
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
     </>
