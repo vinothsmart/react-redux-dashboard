@@ -10,15 +10,19 @@ export const Testing = () => {
     city: "",
   });
 
-  const handleChange = useCallback((e) => {
-    // setValues({
-    //   [e.target.name]: e.target.value,
-    // });
-    setValues((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  }, []);
+  const handleChange = useCallback(
+    (e) => {
+      setValues({
+        ...values,
+        [e.target.name]: e.target.value,
+      });
+      // setValues((prev) => ({
+      //   ...prev,
+      //   [e.target.name]: e.target.value,
+      // }));
+    },
+    [values]
+  );
 
   const handleSubmit = useCallback(
     (e) => {
