@@ -1,15 +1,12 @@
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
-  const array = ["🐑", 1, 2, "🐑", "🐑", 3];
-  // remove duplicate
-  // const unique = [...new Set(array)];
-  // another remove duplicate
-  const unique = array.filter((item, index) => {
-    console.log("index", index);
-    console.log("aindex", array.indexOf(item));
-    return array.indexOf(item) === index;
-  });
+  const names = ["vinoth", "kanna", "Santhosh", "Selva"];
+
+  // get longest name
+  const longestName = names.reduce((a, b) => {
+    return a.length > b.length ? a : b;
+  }, "");
 
   return (
     <>
@@ -21,9 +18,7 @@ export const Testing = () => {
       <div className="container">
         <div className="py-4">
           <h1> Testing Page</h1>
-          {unique.map((item, index) => {
-            return <div key={index}>{item}</div>;
-          })}
+          <h3>Longest Name : {longestName}</h3>
         </div>
       </div>
     </>
