@@ -27,9 +27,12 @@ const Basic = () => {
 
   const checkChar = (a, b) => b.split(a).length - 1;
 
+  // const checkWholeNumber = (a) => a % 1 === 0;
   const checkWholeNumber = (a) => a - Math.floor(a) === 0;
 
   const multipleDivision = (a, b) => (a < b ? a / b : a * b);
+
+  const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
 
   return (
     <div>
@@ -150,6 +153,13 @@ const Basic = () => {
         <p>{multipleDivision(90, 45)}</p>
         <p>{multipleDivision(8, 20)}</p>
         <p>{multipleDivision(2, 0.5)}</p>
+      </center>
+      <center>
+        <h1>Check whether a string contains another string and concatenate</h1>
+        <p>{checkStringContains("cheese", "cake")}</p>
+        <p>{checkStringContains("lips", "s")}</p>
+        <p>{checkStringContains("Java", "script")}</p>
+        <p>{checkStringContains(" think, therefore I am", "I")}</p>
       </center>
     </div>
   );
