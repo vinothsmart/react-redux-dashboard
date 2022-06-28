@@ -27,7 +27,7 @@ const Basic = () => {
 
   const checkChar = (a, b) => b.split(a).length - 1;
 
-  const checkWholeNumber = (a) => a % 1 === 0;
+  const checkWholeNumber = (a) => a - Math.floor(a) === 0;
 
   const multipleDivision = (a, b) => (a < b ? a / b : a * b);
 
