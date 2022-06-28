@@ -32,7 +32,8 @@ const Basic = () => {
 
   const multipleDivision = (a, b) => (a < b ? a / b : a * b);
 
-  const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
+  // const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
+  const checkStringContains = (a, b) => (a.indexOf(b) === -1 ? a + b : b + a);
 
   return (
     <div>
