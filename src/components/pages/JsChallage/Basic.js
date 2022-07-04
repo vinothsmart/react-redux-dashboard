@@ -35,6 +35,9 @@ const Basic = () => {
   // const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
   const checkStringContains = (a, b) => (a.indexOf(b) === -1 ? a + b : b + a);
 
+  // const roundNumberToTwoDigits = (a) => Math.round(a * 100) / 100;
+  const roundNumberToTwoDigits = (a) => Number(a.toFixed(2));
+
   return (
     <div>
       <center>
@@ -161,6 +164,13 @@ const Basic = () => {
         <p>{checkStringContains("lips", "s")}</p>
         <p>{checkStringContains("Java", "script")}</p>
         <p>{checkStringContains(" think, therefore I am", "I")}</p>
+      </center>
+      <center>
+        <h1>Round a number to 2 decimal places</h1>
+        <p>{roundNumberToTwoDigits(2.12397)}</p>
+        <p>{roundNumberToTwoDigits(3.136)}</p>
+        <p>{roundNumberToTwoDigits(1.12397)}</p>
+        <p>{roundNumberToTwoDigits(26.1379)}</p>
       </center>
     </div>
   );
