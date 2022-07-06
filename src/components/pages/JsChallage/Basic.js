@@ -38,6 +38,14 @@ const Basic = () => {
   // const roundNumberToTwoDigits = (a) => Math.round(a * 100) / 100;
   const roundNumberToTwoDigits = (a) => Number(a.toFixed(2));
 
+  // const splitNumberToArray = (a) => a.toString().split("");
+  // const splitNumberToArray = (a) => String(a).split("").map(Number);
+  const splitNumberToArray = (a) => {
+    const string = a + "";
+    const strings = string.split("");
+    return strings.map((digit) => Number(digit));
+  };
+
   return (
     <div>
       <center>
@@ -171,6 +179,12 @@ const Basic = () => {
         <p>{roundNumberToTwoDigits(3.136)}</p>
         <p>{roundNumberToTwoDigits(1.12397)}</p>
         <p>{roundNumberToTwoDigits(26.1379)}</p>
+      </center>
+      <center>
+        <h1>Split a number into its digits</h1>
+        <p>{splitNumberToArray(10)}</p>
+        <p>{splitNumberToArray(931)}</p>
+        <p>{splitNumberToArray(193278)}</p>
       </center>
     </div>
   );
