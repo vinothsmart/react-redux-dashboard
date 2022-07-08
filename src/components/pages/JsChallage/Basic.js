@@ -47,11 +47,9 @@ const Basic = () => {
   };
 
   // remove % from string
-  const removePercent = (a) => a.replace("%", "");
-
-  const reverseString = (a) => a.split("").reverse().join("");
-
   const JoinTwoStrings = (a, b) => {
+    // const removePercent = (a) => a.replace("%", "");
+    // const reverseString = (a) => a.split("").reverse().join("");
     // const removeAP = removePercent(a);
     // const removeBP = removePercent(b);
     // const firstLetterUpperCase = removeAP.charAt(0).toUpperCase();
