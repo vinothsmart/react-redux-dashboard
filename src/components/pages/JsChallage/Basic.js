@@ -52,12 +52,16 @@ const Basic = () => {
   const reverseString = (a) => a.split("").reverse().join("");
 
   const JoinTwoStrings = (a, b) => {
-    const removeAP = removePercent(a);
-    const removeBP = removePercent(b);
-    const firstLetterUpperCase = removeAP.charAt(0).toUpperCase();
-    const valueA = removeAP.slice(1);
-    const valueB = reverseString(removeBP);
-    return firstLetterUpperCase + valueA + valueB;
+    // const removeAP = removePercent(a);
+    // const removeBP = removePercent(b);
+    // const firstLetterUpperCase = removeAP.charAt(0).toUpperCase();
+    // const valueA = removeAP.slice(1);
+    // const valueB = reverseString(removeBP);
+    // return firstLetterUpperCase + valueA + valueB;
+    const func = (x) => x.replace("%", "");
+    const first = func(a);
+    const second = func(b).split("").reverse().join("");
+    return first.charAt(0).toUpperCase() + first.slice(1) + second;
   };
 
   return (
