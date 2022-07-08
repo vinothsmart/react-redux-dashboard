@@ -46,6 +46,20 @@ const Basic = () => {
     return strings.map((digit) => Number(digit));
   };
 
+  // remove % from string
+  const removePercent = (a) => a.replace("%", "");
+
+  const reverseString = (a) => a.split("").reverse().join("");
+
+  const JoinTwoStrings = (a, b) => {
+    const removeAP = removePercent(a);
+    const removeBP = removePercent(b);
+    const firstLetterUpperCase = removeAP.charAt(0).toUpperCase();
+    const valueA = removeAP.slice(1);
+    const valueB = reverseString(removeBP);
+    return firstLetterUpperCase + valueA + valueB;
+  };
+
   return (
     <div>
       <center>
@@ -185,6 +199,12 @@ const Basic = () => {
         <p>{splitNumberToArray(10)}</p>
         <p>{splitNumberToArray(931)}</p>
         <p>{splitNumberToArray(193278)}</p>
+      </center>
+      <center>
+        <h1>Split a number into its digits</h1>
+        <p>{JoinTwoStrings("java", "tpi%rcs")}</p>
+        <p>{JoinTwoStrings("c%ountry", "edis")}</p>
+        <p>{JoinTwoStrings("down", "nw%ot")}</p>
       </center>
     </div>
   );
