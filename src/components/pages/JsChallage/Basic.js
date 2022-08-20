@@ -63,25 +63,14 @@ const Basic = () => {
   };
 
   const getPrimeNumbers = (a) => {
-    // if a prime number return a
-    // if not prime number return next highest prime number
-    const isPrime = (a) => {
-      for (let i = 2; i < a; i++) {
-        if (a % i === 0) {
-          return false;
-        }
+    const isPrime = (num) => {
+      for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
       }
-      return a > 1;
+      return num > 1;
     };
-    if (isPrime(a)) {
-      return a;
-    } else {
-      for (let i = a; i < 3000; i++) {
-        if (isPrime(i)) {
-          return i;
-        }
-      }
-    }
+    let n = a;
+    while (!isPrime(n)) n++;
   };
 
   return (
