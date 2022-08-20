@@ -62,6 +62,28 @@ const Basic = () => {
     return first.charAt(0).toUpperCase() + first.slice(1) + second;
   };
 
+  const getPrimeNumbers = (a) => {
+    // if a prime number return a
+    // if not prime number return next highest prime number
+    const isPrime = (a) => {
+      for (let i = 2; i < a; i++) {
+        if (a % i === 0) {
+          return false;
+        }
+      }
+      return a > 1;
+    };
+    if (isPrime(a)) {
+      return a;
+    } else {
+      for (let i = a; i < 3000; i++) {
+        if (isPrime(i)) {
+          return i;
+        }
+      }
+    }
+  };
+
   return (
     <div>
       <center>
@@ -207,6 +229,13 @@ const Basic = () => {
         <p>{JoinTwoStrings("java", "tpi%rcs")}</p>
         <p>{JoinTwoStrings("c%ountry", "edis")}</p>
         <p>{JoinTwoStrings("down", "nw%ot")}</p>
+      </center>
+      <center>
+        <h1>Prime Number</h1>
+        <p>{getPrimeNumbers(38)}</p>
+        <p>{getPrimeNumbers(7)}</p>
+        <p>{getPrimeNumbers(115)}</p>
+        <p>{getPrimeNumbers(2000)}</p>
       </center>
     </div>
   );
