@@ -74,10 +74,8 @@ const Basic = () => {
   };
 
   const getDivisibleNumbers = (a, b) => {
-    const isDivisible = (x, y) => x % y === 0;
-    let n = a;
-    while (!isDivisible(n, b)) n++;
-    return n;
+    while (a % b !== 0) a++;
+    return a;
   };
 
   return (
