@@ -73,6 +73,13 @@ const Basic = () => {
     while (!isPrime(n)) n++;
   };
 
+  const getDivisibleNumbers = (a, b) => {
+    const isDivisible = (x, y) => x % y === 0;
+    let n = a;
+    while (!isDivisible(n, b)) n++;
+    return n;
+  };
+
   return (
     <div>
       <center>
@@ -225,6 +232,13 @@ const Basic = () => {
         <p>{getPrimeNumbers(7)}</p>
         <p>{getPrimeNumbers(115)}</p>
         <p>{getPrimeNumbers(2000)}</p>
+      </center>
+      <center>
+        <h1>Nature Number</h1>
+        <p>{getDivisibleNumbers(1, 23)}</p>
+        <p>{getDivisibleNumbers(23, 23)}</p>
+        <p>{getDivisibleNumbers(7, 3)}</p>
+        <p>{getDivisibleNumbers(-5, 7)}</p>
       </center>
     </div>
   );
