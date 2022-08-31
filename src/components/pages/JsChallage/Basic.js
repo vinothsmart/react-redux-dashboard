@@ -83,17 +83,13 @@ const Basic = () => {
   // Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
   // Return the resulting string
   const insertChar = (a, b) => {
-    const reverseString = (a) => a.split("").reverse().join("");
-    const reverseA = reverseString(a);
-    const reverseB = reverseString(b);
-    const result = [];
-    for (let i = 0; i < reverseA.length; i++) {
-      if (i % 3 === 0 && i !== 0) {
-        result.push(reverseB);
-      }
-      result.push(reverseA[i]);
+    let result = [];
+    let rest = a;
+    while (rest.length) {
+      result.push(rest.slice(-3));
+      rest = rest.slice(0, -3);
     }
-    return result.reverse().join("");
+    return result.reverse().join(b);
   };
 
   return (
