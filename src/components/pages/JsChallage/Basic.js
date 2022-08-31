@@ -78,6 +78,24 @@ const Basic = () => {
     return a;
   };
 
+  // Insert character after every n characters (backwards)
+  // Write a function that takes two strings (a and b) as arguments
+  // Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
+  // Return the resulting string
+  const insertChar = (a, b) => {
+    const reverseString = (a) => a.split("").reverse().join("");
+    const reverseA = reverseString(a);
+    const reverseB = reverseString(b);
+    const result = [];
+    for (let i = 0; i < reverseA.length; i++) {
+      if (i % 3 === 0 && i !== 0) {
+        result.push(reverseB);
+      }
+      result.push(reverseA[i]);
+    }
+    return result.reverse().join("");
+  };
+
   return (
     <div>
       <center>
@@ -237,6 +255,12 @@ const Basic = () => {
         <p>{getDivisibleNumbers(23, 23)}</p>
         <p>{getDivisibleNumbers(7, 3)}</p>
         <p>{getDivisibleNumbers(-5, 7)}</p>
+      </center>
+      <center>
+        <h1>Insert Char</h1>
+        <p>{insertChar("1234567", ".")}</p>
+        <p>{insertChar("abcde", "$")}</p>
+        <p>{insertChar("zxyzxyzxyzxyzxyz", "w")}</p>
       </center>
     </div>
   );
