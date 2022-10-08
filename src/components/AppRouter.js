@@ -24,6 +24,7 @@ import Part2 from "./pages/JsPepare/Part2";
 import Part3 from "./pages/JsPepare/Part3";
 import Part4 from "./pages/JsPepare/Part4";
 import Part5 from "./pages/JsPepare/Part5";
+import Arrays from "./pages/JsChallage/Arrays";
 
 const AppRouter = () => {
   return (
@@ -49,6 +50,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useMemo" component={MemoHook} />
       <Route exact path="/hooks/useCallback" component={CallbackHook} />
       <Route exact path="/jsc/fundamentals" component={Fundamentals} />
+      <Route exact path="/jsc/arrays" component={Arrays} />
       <Route exact path="/jsprepare/Part1" component={Part1} />
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />
