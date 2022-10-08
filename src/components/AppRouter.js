@@ -13,7 +13,7 @@ import EffectHook from "./pages/Hooks/EffectHook";
 import RefHook from "./pages/Hooks/RefHook";
 import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
-import Basic from "./pages/JsChallage/Basic";
+import Fundamentals from "./pages/JsChallage/Fundamentals";
 import LayoutEffectHook from "./pages/Hooks/LayoutEffectHook";
 import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeHandleHook";
 import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
@@ -48,7 +48,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useContext" component={ContextHook} />
       <Route exact path="/hooks/useMemo" component={MemoHook} />
       <Route exact path="/hooks/useCallback" component={CallbackHook} />
-      <Route exact path="/jsc/basic" component={Basic} />
+      <Route exact path="/jsc/fundamentals" component={Fundamentals} />
       <Route exact path="/jsprepare/Part1" component={Part1} />
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />

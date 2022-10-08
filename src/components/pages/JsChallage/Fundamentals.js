@@ -1,6 +1,6 @@
 import React from "react";
 
-const Basic = () => {
+const Fundamentals = () => {
   const sum = (a, b) => a + b;
 
   const compare = (a, b) => a === b;
@@ -262,4 +262,4 @@ const Basic = () => {
   );
 };
 
-export default Basic;
+export default Fundamentals;
