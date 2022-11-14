@@ -13,7 +13,7 @@ import EffectHook from "./pages/Hooks/EffectHook";
 import RefHook from "./pages/Hooks/RefHook";
 import ReducerHook from "./pages/Hooks/ReducerHook";
 import StateHook from "./pages/Hooks/StateHook";
-import Fundamentals from "./pages/JsChallage/Fundamentals";
+import Fundamentals from "./pages/JsChallange/Fundamentals";
 import LayoutEffectHook from "./pages/Hooks/LayoutEffectHook";
 import ImperativeHandleHook from "./pages/Hooks/ImperativeHandleHook/ImperativeHandleHook";
 import ContextHook from "./pages/Hooks/ContextHook/ContextHook";
@@ -24,7 +24,8 @@ import Part2 from "./pages/JsPepare/Part2";
 import Part3 from "./pages/JsPepare/Part3";
 import Part4 from "./pages/JsPepare/Part4";
 import Part5 from "./pages/JsPepare/Part5";
-import Arrays from "./pages/JsChallage/Arrays";
+import Arrays from "./pages/JsChallange/Arrays";
+import Challange1 from "./pages/TCSChallange/Challange1";
 
 const AppRouter = () => {
   return (
@@ -56,6 +57,7 @@ const AppRouter = () => {
       <Route exact path="/jsprepare/Part3" component={Part3} />
       <Route exact path="/jsprepare/Part4" component={Part4} />
       <Route exact path="/jsprepare/Part5" component={Part5} />
+      <Route exact path="/tsc/challange1" component={Challange1} />
     </Switch>
   );
 };
