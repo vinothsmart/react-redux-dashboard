@@ -26,6 +26,7 @@ import Part4 from "./pages/JsPepare/Part4";
 import Part5 from "./pages/JsPepare/Part5";
 import Arrays from "./pages/JsChallange/Arrays";
 import Challange1 from "./pages/TCSChallange/Challange1";
+import Challange2 from "./pages/TCSChallange/Challange2";
 
 const AppRouter = () => {
   return (
@@ -58,6 +59,7 @@ const AppRouter = () => {
       <Route exact path="/jsprepare/Part4" component={Part4} />
       <Route exact path="/jsprepare/Part5" component={Part5} />
       <Route exact path="/tsc/challange1" component={Challange1} />
+      <Route exact path="/tsc/challange2" component={Challange2} />
     </Switch>
   );
 };
