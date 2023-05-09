@@ -19,6 +19,8 @@ const Fundamentals = () => {
 
   const removeLastThreeChars = (a) => a.slice(0, -3);
 
+  const stringFind = (a) => a.indexOf("is");
+
   const percentOf = (a, b) => (b / 100) * a;
 
   const basicMath = (a, b, c, d, e, f) => (((a + b - c) * d) / e) ** f;
@@ -151,6 +153,12 @@ const Fundamentals = () => {
         <p>{removeLastThreeChars("abcdefg")}</p>
         <p>{removeLastThreeChars("1234")}</p>
         <p>{removeLastThreeChars("fgedcba")}</p>
+      </center>
+      <center>
+        <h1>stringFind of index</h1>
+        <p>{stringFind("praise")}</p>
+        <p>{stringFind("risky")}</p>
+        <p>{stringFind("paris")}</p>
       </center>
       <center>
         <h1>Return the percentage of a number</h1>
