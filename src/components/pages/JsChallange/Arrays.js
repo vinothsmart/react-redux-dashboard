@@ -18,6 +18,10 @@ const Arrays = () => {
   const countNegativeElementsInArray = (a) =>
     a.filter((item) => item < 0).length;
 
+  const sortAlphabeticArray = (a) => a.sort();
+
+  const sortArrayofNumbersDescending = (a) => a.sort((a, b) => b - a);
+
   return (
     <>
       <center>
@@ -69,6 +73,16 @@ const Arrays = () => {
         <p>{countNegativeElementsInArray([1, -2, 2, -4])}</p>
         <p>{countNegativeElementsInArray([0, 9, 1])}</p>
         <p>{countNegativeElementsInArray([4, -3, 2, 1, 0])}</p>
+      </center>
+      <center>
+        <h1>Sort an array of strings alphabetically</h1>
+        <p>{sortAlphabeticArray(["b", "c", "d", "a"])}</p>
+        <p>{sortAlphabeticArray(["z", "c", "d", "a", "y", "a", "w"])}</p>
+      </center>
+      <center>
+        <h1>Sort an array of numbers in descending order</h1>
+        <p>{sortArrayofNumbersDescending([1, 3, 2])}</p>
+        <p>{sortArrayofNumbersDescending([4, 2, 3, 1])}</p>
       </center>
     </>
   );
