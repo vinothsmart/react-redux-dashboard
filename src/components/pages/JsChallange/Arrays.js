@@ -5,6 +5,12 @@ const Arrays = () => {
 
   const removeFirstThreeValuesInArray = (a) => a.slice(3);
 
+  const getLastThreeValuesInArray = (a) => a.slice(-3);
+
+  const getFirstThreeValuesInArray = (a) => a.slice(0, 3);
+
+  const getLastnthValuesInArray = (a, n) => a.slice(-n);
+
   return (
     <>
       <center>
@@ -18,6 +24,24 @@ const Arrays = () => {
         <p>{removeFirstThreeValuesInArray([1, 2, 3, 4])}</p>
         <p>{removeFirstThreeValuesInArray([5, 4, 3, 2, 1, 0])}</p>
         <p>{removeFirstThreeValuesInArray([99, 1, 1])}</p>
+      </center>
+      <center>
+        <h1>last n Values</h1>
+        <p>{getLastThreeValuesInArray([1, 2, 3, 4])}</p>
+        <p>{getLastThreeValuesInArray([5, 4, 3, 2, 1, 0])}</p>
+        <p>{getLastThreeValuesInArray([99, 1, 1])}</p>
+      </center>
+      <center>
+        <h1>fist n Values</h1>
+        <p>{getFirstThreeValuesInArray([1, 2, 3, 4])}</p>
+        <p>{getFirstThreeValuesInArray([5, 4, 3, 2, 1, 0])}</p>
+        <p>{getFirstThreeValuesInArray([99, 1, 1])}</p>
+      </center>
+      <center>
+        <h1>last nth Values</h1>
+        <p>{getLastnthValuesInArray([1, 2, 3, 4, 5], 2)}</p>
+        <p>{getLastnthValuesInArray([1, 2, 3], 6)}</p>
+        <p>{getLastnthValuesInArray([1, 2, 3, 4, 5, 6, 7, 8], 3)}</p>
       </center>
     </>
   );
