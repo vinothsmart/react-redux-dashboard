@@ -11,6 +11,22 @@ const Challange2 = () => {
   console.log(10 - "10"); //0 ----> correct answer ----> 0
   console.log([1, 2] + [3, 4]); // [1, 2, 3, 4]; ----> correct answer ----> 1,23,4
   console.log(NaN === NaN); //true ----> correct answer ----> false
+
+  const userPrivileges = ["user", "user", "user", "admin"];
+  const containsAdmin = userPrivileges.some((element, index) => {
+    console.log({ element, index });
+    return element === "admin";
+  });
+
+  console.log({ containsAdmin });
+
+  const ratings = [3, 5, 4, 3, 5];
+  const goodOverallRating = ratings.every((rating, index) => {
+    console.log({ rating, index });
+    return rating >= 3;
+  });
+  console.log({ goodOverallRating });
+
   return (
     <div>
       <h1>Challange2</h1>
