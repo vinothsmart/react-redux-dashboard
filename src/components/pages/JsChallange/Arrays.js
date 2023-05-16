@@ -10,6 +10,13 @@ const Arrays = () => {
   const getFirstThreeValuesInArray = (a) => a.slice(0, 3);
 
   const getLastnthValuesInArray = (a, n) => a.slice(-n);
+  // Write a function that takes an array (a) and a value (b) as argument. The function should remove all elements equal to 'b' from the array. Return the filtered array.
+  const removeValuesInArray = (a, b) => a.filter((item) => item !== b);
+
+  const countElementsInArray = (a) => a.length;
+
+  const countNegativeElementsInArray = (a) =>
+    a.filter((item) => item < 0).length;
 
   return (
     <>
@@ -42,6 +49,26 @@ const Arrays = () => {
         <p>{getLastnthValuesInArray([1, 2, 3, 4, 5], 2)}</p>
         <p>{getLastnthValuesInArray([1, 2, 3], 6)}</p>
         <p>{getLastnthValuesInArray([1, 2, 3, 4, 5, 6, 7, 8], 3)}</p>
+      </center>
+      <center>
+        <h1>Remove a specific array element</h1>
+        <p>{removeValuesInArray([1, 2, 3], 2)}</p>
+        <p>{removeValuesInArray([1, 2, "2"], "2")}</p>
+        <p>{removeValuesInArray([false, "2", 1], false)}</p>
+        <p>{removeValuesInArray([1, 2, "2 ", 1], 1)}</p>
+      </center>
+      <center>
+        <h1>CountElementsInArray</h1>
+        <p>{countElementsInArray([1, 2, 3], 2)}</p>
+        <p>{countElementsInArray([1, 2, "2"], "2")}</p>
+        <p>{countElementsInArray([false, "2", 1], false)}</p>
+        <p>{countElementsInArray([1, 2, "2 ", 1], 1)}</p>
+      </center>
+      <center>
+        <h1>CountNegativeInArray</h1>
+        <p>{countNegativeElementsInArray([1, -2, 2, -4])}</p>
+        <p>{countNegativeElementsInArray([0, 9, 1])}</p>
+        <p>{countNegativeElementsInArray([4, -3, 2, 1, 0])}</p>
       </center>
     </>
   );
