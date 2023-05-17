@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { SeoTool } from "../elements";
 
 export const Testing = () => {
@@ -17,12 +17,15 @@ export const Testing = () => {
     fetchApi();
   }, []);
 
-  const handleDelete = (id) => {
-    // const id = e.target.value;
+  const handleDelete = useCallback(
+    (id) => {
+      // const id = e.target.value;
 
-    const newTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(newTodos);
-  };
+      const newTodos = todos.filter((todo) => todo.id !== id);
+      setTodos(newTodos);
+    },
+    [todos]
+  );
 
   return (
     <>
