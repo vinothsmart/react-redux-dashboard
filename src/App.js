@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import { Navbar } from "./components";
 import { Provider } from "react-redux";
 import store from "./store";
 import AppRouter from "./components/AppRouter";
