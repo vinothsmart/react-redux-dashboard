@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Navbar />
+          {/* <Navbar /> */}
           <AppRouter />
         </div>
       </Router>
