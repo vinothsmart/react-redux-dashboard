@@ -8,6 +8,23 @@ export const Testing = () => {
 
   console.log([firstkey, secondkey, thirdkey, fourthkey]);
 
+  // same as function above
+  const keys = Object.keys(object).reduce((acc, key) => {
+    acc.push(key);
+    // second need to inner object key here
+    const innerKey = Object.keys(object[key])[0];
+    acc.push(innerKey);
+    // third need to inner object key here
+    const innerInnerKey = Object.keys(object[key][innerKey])[0];
+    acc.push(innerInnerKey);
+    // fourth need to inner object key here
+    const innerInnerInnerKey = Object.keys(
+      object[key][innerKey][innerInnerKey]
+    )[0];
+    acc.push(innerInnerInnerKey);
+    return acc;
+  }, []);
+  console.log(keys);
   return (
     <>
       <div className="container">
