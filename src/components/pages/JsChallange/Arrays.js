@@ -31,6 +31,10 @@ const Arrays = () => {
 
   // return arr.reduce((a, b) => a.length <= b.length ? b : a);
 
+  const checkAllArrayEqual = (a) => a.every((item) => item === a[0]);
+
+  //   return new Set(arr).size === 1
+
   return (
     <>
       <center>
@@ -109,6 +113,13 @@ const Arrays = () => {
         <h1>Find the longest string in an array of strings</h1>
         <p>{longestStringInArray(["help", "me"])}</p>
         <p>{longestStringInArray(["I", "need", "candy"])}</p>
+      </center>
+      <center>
+        <h1>Check if all array elements are equal</h1>
+        <p>{checkAllArrayEqual([true, true, true, true]) ? "true" : "false"}</p>
+        <p>{checkAllArrayEqual(["test", "test", "test"]) ? "true" : "false"}</p>
+        <p>{checkAllArrayEqual([1, 1, 1, 2]) ? "true" : "false"}</p>
+        <p>{checkAllArrayEqual(["10", 10, 10, 10]) ? "true" : "false"}</p>
       </center>
     </>
   );
