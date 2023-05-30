@@ -26,6 +26,11 @@ const Arrays = () => {
 
   const averageOfArray = (a) => a.reduce((a, b) => a + b) / a.length;
 
+  const longestStringInArray = (a) =>
+    a.reduce((a, b) => (a.length > b.length ? a : b));
+
+  // return arr.reduce((a, b) => a.length <= b.length ? b : a);
+
   return (
     <>
       <center>
@@ -99,6 +104,11 @@ const Arrays = () => {
         <p>{averageOfArray([10, 100, 40])}</p>
         <p>{averageOfArray([10, 100, 1000])}</p>
         <p>{averageOfArray([-50, 0, 50, 200])}</p>
+      </center>
+      <center>
+        <h1>Find the longest string in an array of strings</h1>
+        <p>{longestStringInArray(["help", "me"])}</p>
+        <p>{longestStringInArray(["I", "need", "candy"])}</p>
       </center>
     </>
   );
