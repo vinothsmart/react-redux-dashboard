@@ -24,6 +24,8 @@ const Arrays = () => {
 
   const sumOfArray = (a) => a.reduce((a, b) => a + b);
 
+  const averageOfArray = (a) => a.reduce((a, b) => a + b) / a.length;
+
   return (
     <>
       <center>
@@ -91,6 +93,12 @@ const Arrays = () => {
         <p>{sumOfArray([10, 100, 40])}</p>
         <p>{sumOfArray([10, 100, 1000, 1])}</p>
         <p>{sumOfArray([-50, 0, 50, 200])}</p>
+      </center>
+      <center>
+        <h1>Return the average of an array of numbers</h1>
+        <p>{averageOfArray([10, 100, 40])}</p>
+        <p>{averageOfArray([10, 100, 1000])}</p>
+        <p>{averageOfArray([-50, 0, 50, 200])}</p>
       </center>
     </>
   );
