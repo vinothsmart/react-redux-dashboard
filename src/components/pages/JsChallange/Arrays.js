@@ -22,6 +22,8 @@ const Arrays = () => {
 
   const sortArrayofNumbersDescending = (a) => a.sort((a, b) => b - a);
 
+  const sumOfArray = (a) => a.reduce((a, b) => a + b);
+
   return (
     <>
       <center>
@@ -83,6 +85,12 @@ const Arrays = () => {
         <h1>Sort an array of numbers in descending order</h1>
         <p>{sortArrayofNumbersDescending([1, 3, 2])}</p>
         <p>{sortArrayofNumbersDescending([4, 2, 3, 1])}</p>
+      </center>
+      <center>
+        <h1>Calculate the sum of an array of numbers</h1>
+        <p>{sumOfArray([10, 100, 40])}</p>
+        <p>{sumOfArray([10, 100, 1000, 1])}</p>
+        <p>{sumOfArray([-50, 0, 50, 200])}</p>
       </center>
     </>
   );
