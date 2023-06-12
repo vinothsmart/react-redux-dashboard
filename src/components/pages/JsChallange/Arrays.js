@@ -35,13 +35,17 @@ const Arrays = () => {
 
   //   return new Set(arr).size === 1
 
-  const mergeAttributes = (...arrays) => {
-    let mergedArray = [];
-    arrays.forEach((array) => {
-      mergedArray = [...mergedArray, ...array];
-    });
-    return mergedArray;
-  };
+  // const mergeAttributes = (...a) => [].concat(...a);
+  // const mergeAttributes = (...arrays) => {
+  //   let mergedArray = [];
+  //   arrays.forEach((array) => {
+  //     mergedArray = [...mergedArray, ...array];
+  //   });
+  //   return mergedArray;
+  // };
+
+  const mergeAttributes = (...a) => a.flat();
+
   return (
     <>
       <center>
