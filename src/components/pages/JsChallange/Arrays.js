@@ -46,6 +46,27 @@ const Arrays = () => {
 
   const mergeAttributes = (...a) => a.flat();
 
+  const sortringInObject = (a) => a.sort((a, b) => a.b - b.b);
+
+  const arrayObject1 = sortringInObject([
+    { a: 1, b: 2 },
+    { a: 5, b: 4 },
+  ]);
+
+  const arrayObject2 = sortringInObject([
+    { a: 2, b: 10 },
+    { a: 5, b: 4 },
+  ]);
+
+  const arrayObject3 = sortringInObject([
+    { a: 1, b: 7 },
+    { a: 2, b: 1 },
+  ]);
+
+  console.log(arrayObject1);
+  console.log(arrayObject2);
+  console.log(arrayObject3);
+
   return (
     <>
       <center>
@@ -137,6 +158,10 @@ const Arrays = () => {
         <p>{mergeAttributes([1, 2, 3], [4, 5, 6])}</p>
         <p>{mergeAttributes(["a", "b", "c"], [4, 5, 6])}</p>
         <p>{mergeAttributes([true, true], [1, 2], ["a", "b"])}</p>
+      </center>
+      <center>
+        <h1>Sort array by object property</h1>
+        {/* <p>{arrayObject1}</p> */}
       </center>
     </>
   );
