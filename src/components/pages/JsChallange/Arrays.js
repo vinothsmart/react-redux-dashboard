@@ -35,6 +35,13 @@ const Arrays = () => {
 
   //   return new Set(arr).size === 1
 
+  const mergeAttributes = (...arrays) => {
+    let mergedArray = [];
+    arrays.forEach((array) => {
+      mergedArray = [...mergedArray, ...array];
+    });
+    return mergedArray;
+  };
   return (
     <>
       <center>
@@ -120,6 +127,12 @@ const Arrays = () => {
         <p>{checkAllArrayEqual(["test", "test", "test"]) ? "true" : "false"}</p>
         <p>{checkAllArrayEqual([1, 1, 1, 2]) ? "true" : "false"}</p>
         <p>{checkAllArrayEqual(["10", 10, 10, 10]) ? "true" : "false"}</p>
+      </center>
+      <center>
+        <h1>Merge an arbitrary number of arrays</h1>
+        <p>{mergeAttributes([1, 2, 3], [4, 5, 6])}</p>
+        <p>{mergeAttributes(["a", "b", "c"], [4, 5, 6])}</p>
+        <p>{mergeAttributes([true, true], [1, 2], ["a", "b"])}</p>
       </center>
     </>
   );
