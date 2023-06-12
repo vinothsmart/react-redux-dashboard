@@ -46,7 +46,12 @@ const Arrays = () => {
 
   const mergeAttributes = (...a) => a.flat();
 
-  const sortringInObject = (a) => a.sort((a, b) => a.b - b.b);
+  // const sortringInObject = (a) => a.sort((a, b) => a.b - b.b);
+
+  const sortringInObject = (arr) => {
+    const sort = (x, y) => x.b - y.b;
+    return arr.sort(sort);
+  };
 
   const arrayObject1 = sortringInObject([
     { a: 1, b: 2 },
