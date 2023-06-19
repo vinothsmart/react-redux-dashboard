@@ -4,6 +4,15 @@ const Objects = () => {
   const accessObjectProp = (obj) => obj.country;
   const accessObjectofTwo = (obj) => obj["prop-2"];
   const accessObjectThree = (obj, key) => obj[key];
+  //   const accessObjectofFour = (obj, key) => {
+  //     // check if the key is in the object
+  //     if (obj.hasOwnProperty(key)) {
+  //       return "true";
+  //     }
+  //     return "false";
+  //   };
+  // another method
+  const accessObjectofFour = (obj, key) => (key in obj ? "true" : "false");
   return (
     <div>
       <center>
@@ -16,7 +25,6 @@ const Objects = () => {
         <p>{accessObjectofTwo({ one: 1, "prop-2": 2 })}</p>
         <p>{accessObjectofTwo({ "prop-2": "two", prop: "test" })}</p>
       </center>
-
       <center>
         <h1>Accessing object properties three</h1>
         <p>
@@ -31,6 +39,12 @@ const Objects = () => {
             "country"
           )}
         </p>
+      </center>
+      <center>
+        <h1>Accessing object properties Four</h1>
+        <p>{accessObjectofFour({ a: 1, b: 2, c: 3 }, "b")}</p>
+        <p>{accessObjectofFour({ x: "a", y: "b", z: "c" }, "a")}</p>
+        <p>{accessObjectofFour({ x: "a", y: "b", z: undefined }, "z")}</p>
       </center>
     </div>
   );
