@@ -72,6 +72,9 @@ const Arrays = () => {
   console.log(arrayObject2);
   console.log(arrayObject3);
 
+  const mergeTwoArrays = (a, b) =>
+    [...new Set([...a, ...b])].sort((a, b) => a - b);
+
   return (
     <>
       <center>
@@ -167,6 +170,11 @@ const Arrays = () => {
       <center>
         <h1>Sort array by object property</h1>
         {/* <p>{arrayObject1}</p> */}
+      </center>
+      <center>
+        <h1>Merge two arrays with duplicate values</h1>
+        <p>{mergeTwoArrays([1, 2, 3], [3, 4, 5])}</p>
+        <p>{mergeTwoArrays([-10, 22, 333, 42], [-11, 5, 22, 41, 42])}</p>
       </center>
     </>
   );
