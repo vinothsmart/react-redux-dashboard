@@ -28,6 +28,7 @@ import Arrays from "./pages/JsChallange/Arrays";
 import Challange1 from "./pages/TCSChallange/Challange1";
 import Challange2 from "./pages/TCSChallange/Challange2";
 import JSChallange from "./pages/ARCTutorial/JSCPratice/JSChallange";
+import Objects from "./pages/JsChallange/Objects";
 
 const AppRouter = () => {
   return (
@@ -54,6 +55,7 @@ const AppRouter = () => {
       <Route exact path="/hooks/useCallback" component={CallbackHook} />
       <Route exact path="/jsc/fundamentals" component={Fundamentals} />
       <Route exact path="/jsc/arrays" component={Arrays} />
+      <Route exact path="/jsc/objects" component={Objects} />
       <Route exact path="/jsprepare/Part1" component={Part1} />
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />
