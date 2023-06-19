@@ -10,6 +10,12 @@ const APartice3 = () => {
     (item, index) => dulicatedArray.indexOf(item) === index
   );
   console.log(uniqueArray2);
+  // find duplicate in array
+  const duplicate = dulicatedArray.filter(
+    (item, index, arr) => arr.indexOf(item) !== index
+  );
+
+  console.log(duplicate);
 
   return <div>APartice3</div>;
 };
