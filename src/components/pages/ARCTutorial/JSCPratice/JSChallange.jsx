@@ -1,8 +1,8 @@
 import React from "react";
-import APartice3 from "./partice/APartice3";
+import APartice4 from "./partice/APartice4";
 
 const JSChallange = () => {
-  return <APartice3 />;
+  return <APartice4 />;
 };
 
 export default JSChallange;
