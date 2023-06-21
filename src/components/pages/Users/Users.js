@@ -1,4 +1,5 @@
 import { useList } from "./useList";
+import { trimName } from "./Utility";
 
 export const Users = () => {
   const { list, handleDeleteItem } = useList();
@@ -12,7 +13,7 @@ export const Users = () => {
             <div key={id}>
               <div className="row">
                 <div className="col-lg-4">
-                  <p>{name.slice(0, 30) + (name.length > 30 ? "..." : "")}</p>
+                  <p>{trimName(name)}</p>
                 </div>
                 <div className="col-lg-4">
                   <button
