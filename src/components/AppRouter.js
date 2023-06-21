@@ -29,6 +29,7 @@ import Challange1 from "./pages/Challange/Challange1";
 import Challange2 from "./pages/Challange/Challange2";
 import JSChallange from "./pages/ARCTutorial/JSCPratice/JSChallange";
 import Objects from "./pages/JsChallange/Objects";
+import { Users } from "./pages/Users";
 
 const AppRouter = () => {
   return (
@@ -65,6 +66,7 @@ const AppRouter = () => {
       <Route exact path="/tsc/challange2" component={Challange2} />
       <Route exact path="/tsc/challange2" component={Challange2} />
       <Route exact path="/arc/challange" component={JSChallange} />
+      <Route exact path="/users" component={Users} />
     </Switch>
   );
 };
