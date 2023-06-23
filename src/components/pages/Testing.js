@@ -5,11 +5,17 @@ const GITHUB_USERS_API = "https://api.github.com/users";
 
 export const Testing = () => {
   const [users, setUsers] = useState([]);
+  const fetchUsers = async () => {
+    try {
+      const result = await axios.get(GITHUB_USERS_API);
+      setUsers(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const fetchUsersData = useCallback(() => {
-    axios.get(GITHUB_USERS_API).then((res) => {
-      setUsers(res.data);
-    });
+    fetchUsers();
   }, []);
 
   useEffect(() => {
