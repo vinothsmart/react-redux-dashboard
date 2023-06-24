@@ -7,7 +7,7 @@ export const Testing = () => {
   const [isError, setIsError] = useState(false);
   const [users, setUsers] = useState([]);
 
-  const fetchUser = async () => {
+  const fetchUserData = useCallback(async () => {
     try {
       const userData = await fetch(usersDataURL);
       const result = await userData.json();
@@ -16,10 +16,6 @@ export const Testing = () => {
       setIsError(true);
     }
     setIsLoading(false);
-  };
-
-  const fetchUserData = useCallback(() => {
-    fetchUser();
   }, []);
 
   const handleDelete = useCallback(
