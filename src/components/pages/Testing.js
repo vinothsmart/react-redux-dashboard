@@ -19,8 +19,18 @@ export const Testing = () => {
   //   setIsLoading(false);
   // }, []);
 
-  const fetchUserData = useCallback(() => {
-    axios.get(usersDataURL).then((res) => setUsers(res.data));
+  // const fetchUserData = useCallback(() => {
+  //   axios.get(usersDataURL).then((res) => setUsers(res.data));
+  //   setIsLoading(false);
+  // }, []);
+
+  const fetchUserData = useCallback(async () => {
+    try {
+      const { data } = await axios.get(usersDataURL);
+      setUsers(data);
+    } catch {
+      setIsError(true);
+    }
     setIsLoading(false);
   }, []);
 
