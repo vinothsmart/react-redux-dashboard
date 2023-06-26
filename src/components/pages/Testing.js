@@ -1,5 +1,3 @@
-from "react";
-
 export const Testing = () => {
   return (
     <>
