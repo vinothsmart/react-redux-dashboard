@@ -1,10 +1,7 @@
-import APartice8 from "./partice/APartice8";
+import APartice9 from "./partice/APartice9";
 
 const JSChallange = () => {
-  const months = ["March", "Jan", "May", "Feb", "June", "April", "July"];
-  const sorting = months.sort();
-  console.log(sorting);
-  return <APartice8 />;
+  return <APartice9 />;
 };
 
 export default JSChallange;
