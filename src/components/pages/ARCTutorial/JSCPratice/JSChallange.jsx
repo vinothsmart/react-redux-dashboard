@@ -1,11 +1,10 @@
-import APartice7 from "./partice/APartice7";
+import APartice8 from "./partice/APartice8";
 
 const JSChallange = () => {
-  const unsortedArr = [10, 4, 29, 34, 63, 3, 87, 72];
-  const sorting = unsortedArr.sort((a, b) => a - b);
-
+  const months = ["March", "Jan", "May", "Feb", "June", "April", "July"];
+  const sorting = months.sort();
   console.log(sorting);
-  return <APartice7 />;
+  return <APartice8 />;
 };
 
 export default JSChallange;
