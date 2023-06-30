@@ -6,10 +6,13 @@ export const Testing = () => {
   const [currentTime, setCurrentTime] = useState(time);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       // setCurrentTime(currentTime);
       setCurrentTime(new Date().toLocaleTimeString());
     }, 1000);
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [currentTime]);
 
   return (
