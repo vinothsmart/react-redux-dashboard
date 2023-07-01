@@ -82,6 +82,21 @@ const Objects = () => {
   //   return Object.values(a).reduce((sum, cur) => sum + cur, 0);
   // };
 
+  // const removeBFromObject = (obj) => {
+  //   delete obj.b;
+  //   return obj;
+  // };
+
+  // another method
+  const removeBFromObject = (obj) => {
+    const { b, ...rest } = obj;
+    return rest;
+  };
+
+  console.log(removeBFromObject({ a: 1, b: 2, c: 3 }));
+  console.log(removeBFromObject({ b: 0, a: 7, d: 8 }));
+  console.log(removeBFromObject({ e: 6, f: 4, b: 5, a: 3 }));
+
   return (
     <div>
       <center>
@@ -156,6 +171,9 @@ const Objects = () => {
         <p>{sumtheObjectValues({ a: 1, b: 2, c: 3 })}</p>
         <p>{sumtheObjectValues({ j: 9, i: 2, x: 3, z: 4 })}</p>
         <p>{sumtheObjectValues({ w: 15, x: 22, y: 13 })}</p>
+      </center>
+      <center>
+        <h1>Remove a property from an object</h1>
       </center>
     </div>
   );
