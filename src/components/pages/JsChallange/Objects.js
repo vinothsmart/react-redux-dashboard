@@ -23,7 +23,18 @@ const Objects = () => {
   // };
 
   // another method
-  const isObjectPropertyTruthy = (obj, key) => (obj[key] ? "true" : "false");
+  // const isObjectPropertyTruthy = (obj, key) => (obj[key] ? "true" : "false");
+
+  // another method
+  const isObjectPropertyTruthy = (a, b) => Boolean(a[b]);
+
+  const createObjectWithKey = (a) => {
+    return { key: a } ? "true" : "false";
+  };
+
+  const createKeyWithObject = (a, b) => {
+    return { [a]: b };
+  };
 
   return (
     <div>
@@ -63,6 +74,19 @@ const Objects = () => {
         <p>{isObjectPropertyTruthy({ a: 1, b: 2, c: 3 }, "b")}</p>
         <p>{isObjectPropertyTruthy({ x: "a", y: null, z: "y" }, "b")}</p>
         <p>{isObjectPropertyTruthy({ x: "a", b: "b", z: undefined }, "z")}</p>
+      </center>
+      <center>
+        <h1>Create Object</h1>
+        <p>{createObjectWithKey("a")}</p>
+        <p>{createObjectWithKey("z")}</p>
+        <p>{createObjectWithKey("b")}</p>
+      </center>
+
+      <center>
+        <h1>Creating Javascript objects two</h1>
+        <p>{createKeyWithObject("a", "b")}</p>
+        <p>{createKeyWithObject("z", "x")}</p>
+        <p>{createKeyWithObject("b", "w")}</p>
       </center>
     </div>
   );
