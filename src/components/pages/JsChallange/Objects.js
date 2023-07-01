@@ -13,6 +13,18 @@ const Objects = () => {
   //   };
   // another method
   const accessObjectofFour = (obj, key) => (key in obj ? "true" : "false");
+
+  // check if property exists in object and is truthy
+  // const isObjectPropertyTruthy = (obj, key) => {
+  //   if (key in obj) {
+  //     return obj[key] ? "true" : "false";
+  //   }
+  //   return "false";
+  // };
+
+  // another method
+  const isObjectPropertyTruthy = (obj, key) => (obj[key] ? "true" : "false");
+
   return (
     <div>
       <center>
@@ -45,6 +57,12 @@ const Objects = () => {
         <p>{accessObjectofFour({ a: 1, b: 2, c: 3 }, "b")}</p>
         <p>{accessObjectofFour({ x: "a", y: "b", z: "c" }, "a")}</p>
         <p>{accessObjectofFour({ x: "a", y: "b", z: undefined }, "z")}</p>
+      </center>
+      <center>
+        <h1>Check if property exists in object and is truthy Five</h1>
+        <p>{isObjectPropertyTruthy({ a: 1, b: 2, c: 3 }, "b")}</p>
+        <p>{isObjectPropertyTruthy({ x: "a", y: null, z: "y" }, "b")}</p>
+        <p>{isObjectPropertyTruthy({ x: "a", b: "b", z: undefined }, "z")}</p>
       </center>
     </div>
   );
