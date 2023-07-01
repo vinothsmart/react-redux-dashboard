@@ -68,10 +68,10 @@ const Objects = () => {
     return obj?.a?.b;
   };
 
-  console.log(getTheValueOfB({ a: 1 }));
-  console.log(getTheValueOfB({ a: { b: { c: 3 } } }));
-  console.log(getTheValueOfB({ b: { a: 1 } }));
-  console.log(getTheValueOfB({ a: { b: 2 } }));
+  // console.log(getTheValueOfB({ a: 1 }));
+  // console.log(getTheValueOfB({ a: { b: { c: 3 } } }));
+  // console.log(getTheValueOfB({ b: { a: 1 } }));
+  // console.log(getTheValueOfB({ a: { b: 2 } }));
 
   const sumtheObjectValues = (obj) => {
     return Object.values(obj).reduce((a, b) => a + b);
@@ -93,9 +93,29 @@ const Objects = () => {
     return rest;
   };
 
-  console.log(removeBFromObject({ a: 1, b: 2, c: 3 }));
-  console.log(removeBFromObject({ b: 0, a: 7, d: 8 }));
-  console.log(removeBFromObject({ e: 6, f: 4, b: 5, a: 3 }));
+  // console.log(removeBFromObject({ a: 1, b: 2, c: 3 }));
+  // console.log(removeBFromObject({ b: 0, a: 7, d: 8 }));
+  // console.log(removeBFromObject({ e: 6, f: 4, b: 5, a: 3 }));
+
+  // const changeSecondParamterBTOD = (x, y) => {
+  //   const { b, ...rest } = y;
+  //   const d = { b };
+  //   // change key value of b to d
+  //   const newB = Object.fromEntries(
+  //     Object.entries(d).map(([key, val]) => [key.replace("b", "d"), val])
+  //   );
+
+  //   return { ...x, ...rest, ...newB };
+  // };
+
+  // another method
+  const changeSecondParamterBTOD = (x, y) => {
+    const { b, ...rest } = y;
+    return { ...x, ...rest, d: b };
+  };
+
+  console.log(changeSecondParamterBTOD({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }));
+  console.log(changeSecondParamterBTOD({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
 
   return (
     <div>
@@ -174,6 +194,7 @@ const Objects = () => {
       </center>
       <center>
         <h1>Remove a property from an object</h1>
+        <h1>Merge two objects with matching keys</h1>
       </center>
     </div>
   );
