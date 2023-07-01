@@ -36,6 +36,23 @@ const Objects = () => {
     return { [a]: b };
   };
 
+  // const createThreeObject = (a, b) => {
+  //   return Object.fromEntries(a.map((_, i) => [a[i], b[i]]));
+  // };
+
+  // another method
+  // const createThreeObject = (a, b) => {
+  //   return a.reduce((obj, key, index) => {
+  //     obj[key] = b[index];
+  //     return obj;
+  //   }, {});
+  // };
+
+  // another method
+  const createThreeObject = (a, b) => {
+    return a.reduce((acc, cur, i) => ({ ...acc, [cur]: b[i] }), {});
+  };
+
   return (
     <div>
       <center>
@@ -81,12 +98,17 @@ const Objects = () => {
         <p>{createObjectWithKey("z")}</p>
         <p>{createObjectWithKey("b")}</p>
       </center>
-
       <center>
         <h1>Creating Javascript objects two</h1>
         <p>{createKeyWithObject("a", "b")}</p>
         <p>{createKeyWithObject("z", "x")}</p>
         <p>{createKeyWithObject("b", "w")}</p>
+      </center>
+      <center>
+        <h1>Creating Javascript objects three</h1>
+        <p>{createThreeObject(["a", "b", "c"], [1, 2, 3])}</p>
+        <p>{createThreeObject(["w", "x", "y", "z"], [10, 9, 5, 2])}</p>
+        <p>{createThreeObject([1, "b"], ["a", 2])}</p>
       </center>
     </div>
   );
