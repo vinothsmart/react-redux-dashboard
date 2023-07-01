@@ -73,6 +73,15 @@ const Objects = () => {
   console.log(getTheValueOfB({ b: { a: 1 } }));
   console.log(getTheValueOfB({ a: { b: 2 } }));
 
+  const sumtheObjectValues = (obj) => {
+    return Object.values(obj).reduce((a, b) => a + b);
+  };
+
+  // another method
+  // const sumtheObjectValuesTwo = (a) => {
+  //   return Object.values(a).reduce((sum, cur) => sum + cur, 0);
+  // };
+
   return (
     <div>
       <center>
@@ -142,6 +151,12 @@ const Objects = () => {
         <p>{getTheValueOfB({ a: { b: { c: 3 } } })}</p>
         <p>{getTheValueOfB({ b: { a: 1 } })}</p>
       </center> */}
+      <center>
+        <h1>Sum object values</h1>
+        <p>{sumtheObjectValues({ a: 1, b: 2, c: 3 })}</p>
+        <p>{sumtheObjectValues({ j: 9, i: 2, x: 3, z: 4 })}</p>
+        <p>{sumtheObjectValues({ w: 15, x: 22, y: 13 })}</p>
+      </center>
     </div>
   );
 };
