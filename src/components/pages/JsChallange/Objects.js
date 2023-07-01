@@ -53,6 +53,26 @@ const Objects = () => {
     return a.reduce((acc, cur, i) => ({ ...acc, [cur]: b[i] }), {});
   };
 
+  const extractKeyFromObject = (obj) => {
+    return Object.keys(obj);
+  };
+
+  // const getTheValueOfB = (obj) => {
+  //   const firstKey = Object.keys(obj)[0];
+  //   const secondKey = Object.keys(obj[firstKey])[0];
+  //   // check second key as b and return the value or return undefined
+  //   return secondKey === "b" ? obj[firstKey][secondKey] : undefined;
+  // };
+
+  const getTheValueOfB = (obj) => {
+    return obj?.a?.b;
+  };
+
+  console.log(getTheValueOfB({ a: 1 }));
+  console.log(getTheValueOfB({ a: { b: { c: 3 } } }));
+  console.log(getTheValueOfB({ b: { a: 1 } }));
+  console.log(getTheValueOfB({ a: { b: 2 } }));
+
   return (
     <div>
       <center>
@@ -98,18 +118,30 @@ const Objects = () => {
         <p>{createObjectWithKey("z")}</p>
         <p>{createObjectWithKey("b")}</p>
       </center>
-      <center>
+      {/* <center>
         <h1>Creating Javascript objects two</h1>
         <p>{createKeyWithObject("a", "b")}</p>
         <p>{createKeyWithObject("z", "x")}</p>
         <p>{createKeyWithObject("b", "w")}</p>
-      </center>
-      <center>
+      </center> */}
+      {/* <center>
         <h1>Creating Javascript objects three</h1>
         <p>{createThreeObject(["a", "b", "c"], [1, 2, 3])}</p>
         <p>{createThreeObject(["w", "x", "y", "z"], [10, 9, 5, 2])}</p>
         <p>{createThreeObject([1, "b"], ["a", 2])}</p>
-      </center>
+      </center> */}
+      {/* <center>
+        <h1>Extract keys from Javascript object</h1>
+        <p>{extractKeyFromObject({ a: 1, b: 2, c: 3 })}</p>
+        <p>{extractKeyFromObject({ j: 9, i: 2, x: 3, z: 4 })}</p>
+        <p>{extractKeyFromObject({ w: 15, x: 22, y: 13 })}</p>
+      </center> */}
+      {/* <center>
+        <h1>Return nested object property</h1>
+        <p>{getTheValueOfB({ a: 1 })}</p>
+        <p>{getTheValueOfB({ a: { b: { c: 3 } } })}</p>
+        <p>{getTheValueOfB({ b: { a: 1 } })}</p>
+      </center> */}
     </div>
   );
 };
