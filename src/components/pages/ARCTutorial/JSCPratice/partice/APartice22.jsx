@@ -8,9 +8,9 @@ const APartice22 = () => {
   // // only called we declare it
   // getData();
 
-  function getData() {
-    console.log("Hi, I am from regular getData function");
-  }
+  // function getData() {
+  //   console.log("Hi, I am from regular getData function");
+  // }
   // IIFEs
   // Functions Expression -> they will get called immediately
   (function getData() {
