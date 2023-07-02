@@ -32,9 +32,9 @@ const Objects = () => {
     return { key: a } ? "true" : "false";
   };
 
-  const createKeyWithObject = (a, b) => {
-    return { [a]: b };
-  };
+  // const createKeyWithObject = (a, b) => {
+  //   return { [a]: b };
+  // };
 
   // const createThreeObject = (a, b) => {
   //   return Object.fromEntries(a.map((_, i) => [a[i], b[i]]));
@@ -49,13 +49,13 @@ const Objects = () => {
   // };
 
   // another method
-  const createThreeObject = (a, b) => {
-    return a.reduce((acc, cur, i) => ({ ...acc, [cur]: b[i] }), {});
-  };
+  // const createThreeObject = (a, b) => {
+  //   return a.reduce((acc, cur, i) => ({ ...acc, [cur]: b[i] }), {});
+  // };
 
-  const extractKeyFromObject = (obj) => {
-    return Object.keys(obj);
-  };
+  // const extractKeyFromObject = (obj) => {
+  //   return Object.keys(obj);
+  // };
 
   // const getTheValueOfB = (obj) => {
   //   const firstKey = Object.keys(obj)[0];
@@ -64,9 +64,9 @@ const Objects = () => {
   //   return secondKey === "b" ? obj[firstKey][secondKey] : undefined;
   // };
 
-  const getTheValueOfB = (obj) => {
-    return obj?.a?.b;
-  };
+  // const getTheValueOfB = (obj) => {
+  //   return obj?.a?.b;
+  // };
 
   // console.log(getTheValueOfB({ a: 1 }));
   // console.log(getTheValueOfB({ a: { b: { c: 3 } } }));
@@ -88,10 +88,10 @@ const Objects = () => {
   // };
 
   // another method
-  const removeBFromObject = (obj) => {
-    const { b, ...rest } = obj;
-    return rest;
-  };
+  // const removeBFromObject = (obj) => {
+  //   const { b, ...rest } = obj;
+  //   return rest;
+  // };
 
   // console.log(removeBFromObject({ a: 1, b: 2, c: 3 }));
   // console.log(removeBFromObject({ b: 0, a: 7, d: 8 }));
