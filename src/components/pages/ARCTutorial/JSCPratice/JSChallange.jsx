@@ -1,7 +1,7 @@
-import APartice23 from "./partice/APartice23";
+import APartice24 from "./partice/APartice24";
 
 const JSChallange = () => {
-  return <APartice23 />;
+  return <APartice24 />;
 };
 
 export default JSChallange;
