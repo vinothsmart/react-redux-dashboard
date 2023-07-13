@@ -40,6 +40,11 @@ const Dates = () => {
     return Math.abs(a - b) / 1000 / 60 <= 6;
   }
 
+  // Check if one date is earlier than another
+  const checkOneDateIsEarlier = (a, b) => {
+    return a < b ? "true" : "false";
+  };
+
   return (
     <>
       <center>
@@ -113,6 +118,27 @@ const Dates = () => {
           {checkBothDatesWithinOneHour(
             new Date("2000/01/01 08:00:00"),
             new Date("2000/01/01 10:00:00")
+          )}
+        </p>
+      </center>
+      <center>
+        <h1>Check if one date is earlier than another</h1>
+        <p>
+          {checkOneDateIsEarlier(
+            new Date("2000/01/01 08:00:00"),
+            new Date("2000/01/01 08:45:00")
+          )}
+        </p>
+        <p>
+          {checkOneDateIsEarlier(
+            new Date("2000/01/01 08:00:00"),
+            new Date("2000/01/01 08:00:00")
+          )}
+        </p>
+        <p>
+          {checkOneDateIsEarlier(
+            new Date("2001/01/01 08:00:00"),
+            new Date("2000/01/01 08:00:00")
           )}
         </p>
       </center>
