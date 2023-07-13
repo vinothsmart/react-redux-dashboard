@@ -109,19 +109,19 @@ const Objects = () => {
   // };
 
   // another method
-  const changeSecondParamterBTOD = (x, y) => {
-    const { b, ...rest } = y;
-    return { ...x, ...rest, d: b };
-  };
+  // const changeSecondParamterBTOD = (x, y) => {
+  //   const { b, ...rest } = y;
+  //   return { ...x, ...rest, d: b };
+  // };
 
   // console.log(changeSecondParamterBTOD({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }));
   // console.log(changeSecondParamterBTOD({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
 
-  const multiplyAllObjetByX = (a, b) => {
-    return Object.fromEntries(
-      Object.entries(a).map(([key, val]) => [key, val * b])
-    );
-  };
+  // const multiplyAllObjetByX = (a, b) => {
+  //   return Object.fromEntries(
+  //     Object.entries(a).map(([key, val]) => [key, val * b])
+  //   );
+  // };
 
   // another method
   const multiplyAllObjetByX2 = (a, b) => {

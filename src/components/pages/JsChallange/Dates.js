@@ -36,9 +36,9 @@ const Dates = () => {
   };
 
   // another way
-  function checkBothDatesWithinOneHour2(a, b) {
-    return Math.abs(a - b) / 1000 / 60 <= 6;
-  }
+  // function checkBothDatesWithinOneHour2(a, b) {
+  //   return Math.abs(a - b) / 1000 / 60 <= 6;
+  // }
 
   // Check if one date is earlier than another
   const checkOneDateIsEarlier = (a, b) => {
