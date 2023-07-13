@@ -6,7 +6,15 @@ const APartice24 = () => {
     return data.split("").reverse().join("");
   };
 
+  // another way
+  const checkPalindrome = (str) => {
+    const data = str.replace(/\W/g, "").toLowerCase();
+    const reverseData = data.split("").reverse().join("");
+    return reverseData;
+  };
+
   console.log(isPalindrome("random"));
+  console.log(checkPalindrome("random"));
   return (
     <div>
       <h1> Palindrome</h1>
