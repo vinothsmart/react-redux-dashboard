@@ -114,8 +114,25 @@ const Objects = () => {
     return { ...x, ...rest, d: b };
   };
 
-  console.log(changeSecondParamterBTOD({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }));
-  console.log(changeSecondParamterBTOD({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
+  // console.log(changeSecondParamterBTOD({ a: 1, b: 2 }, { c: 3, b: 4, e: 5 }));
+  // console.log(changeSecondParamterBTOD({ a: 5, b: 4 }, { c: 3, b: 1, e: 2 }));
+
+  const multiplyAllObjetByX = (a, b) => {
+    return Object.fromEntries(
+      Object.entries(a).map(([key, val]) => [key, val * b])
+    );
+  };
+
+  // another method
+  const multiplyAllObjetByX2 = (a, b) => {
+    return Object.entries(a).reduce((acc, [key, val]) => {
+      return { ...acc, [key]: val * b };
+    }, {});
+  };
+
+  console.log(multiplyAllObjetByX2({ a: 1, b: 2, c: 3 }, 3));
+  console.log(multiplyAllObjetByX2({ j: 9, i: 2, x: 3, z: 4 }, 10));
+  console.log(multiplyAllObjetByX2({ w: 15, x: 22, y: 13 }, 6));
 
   return (
     <div>
@@ -195,6 +212,7 @@ const Objects = () => {
       <center>
         <h1>Remove a property from an object</h1>
         <h1>Merge two objects with matching keys</h1>
+        <h1>Multiply all object values by x</h1>
       </center>
     </div>
   );
