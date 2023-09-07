@@ -32,6 +32,7 @@ import Objects from "./pages/JsChallange/Objects";
 import { Users } from "./pages/Users/Users";
 import OldUsers from "./pages/Users/OldUsers";
 import Dates from "./pages/JsChallange/Dates";
+import Sets from "./pages/JsChallange/Sets";
 
 const AppRouter = () => {
   return (
@@ -60,6 +61,7 @@ const AppRouter = () => {
       <Route exact path="/jsc/arrays" component={Arrays} />
       <Route exact path="/jsc/objects" component={Objects} />
       <Route exact path="/jsc/dates" component={Dates} />
+      <Route exact path="/jsc/sets" component={Sets} />
       <Route exact path="/jsprepare/Part1" component={Part1} />
       <Route exact path="/jsprepare/Part2" component={Part2} />
       <Route exact path="/jsprepare/Part3" component={Part3} />
