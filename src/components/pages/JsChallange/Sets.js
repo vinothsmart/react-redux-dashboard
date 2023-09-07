@@ -36,17 +36,26 @@ const Sets = () => {
   //   };
 
   // another way
-  const createSet = (a, b, c) => {
-    const set = new Set();
-    set.add(a);
-    set.add(b);
-    set.add(c);
+  //   const createSet = (a, b, c) => {
+  //     const set = new Set();
+  //     set.add(a);
+  //     set.add(b);
+  //     set.add(c);
+  //     return set;
+  //   };
+
+  //   console.log(createSet(1, "b", 3));
+  //   console.log(createSet(NaN, null, false));
+  //   console.log(createSet("a", ["b"], { c: 3 }));
+
+  const deleteElement = (set, val) => {
+    set.delete(val);
     return set;
   };
 
-  console.log(createSet(1, "b", 3));
-  console.log(createSet(NaN, null, false));
-  console.log(createSet("a", ["b"], { c: 3 }));
+  console.log(deleteElement(new Set([1, 2, 3]), 1));
+  console.log(deleteElement(new Set("12345"), "3"));
+  console.log(deleteElement(new Set([1, 2, 3]), 4));
 
   return (
     <>
@@ -67,6 +76,9 @@ const Sets = () => {
       </center>
       <center>
         <h1>Creating Javascript Sets</h1>
+      </center>
+      <center>
+        <h1>Delete element from Set</h1>
       </center>
     </>
   );
