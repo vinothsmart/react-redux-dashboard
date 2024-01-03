@@ -20,14 +20,14 @@ const Part2 = () => {
     return item < 0;
   });
 
-  console.log(hasNegative);
+  console.log({ hasNegative });
 
   const hasAllPositive = arr.every((item) => {
     console.log(item);
     return item > 0;
   });
 
-  console.log(hasAllPositive);
+  console.log({ hasAllPositive });
 
   return <div>Part2</div>;
 };
