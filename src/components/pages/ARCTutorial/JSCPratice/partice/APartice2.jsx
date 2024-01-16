@@ -2,9 +2,9 @@ import React from "react";
 
 const APartice2 = () => {
   class Car {
-    constructor(name, model) {
-      this.name = name;
+    constructor(model, name) {
       this.model = model;
+      this.name = name;
     }
     start() {
       console.log(this.name);
@@ -19,8 +19,8 @@ const APartice2 = () => {
     }
     start() {
       super.start();
-      super.end();
-      this.dashboard();
+      // super.end();
+      // this.dashboard();
     }
   }
   const myCar = new ElectricCar("Ford", "Mustang");
