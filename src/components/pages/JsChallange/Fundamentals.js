@@ -25,6 +25,9 @@ const Fundamentals = () => {
 
   const basicMath = (a, b, c, d, e, f) => (((a + b - c) * d) / e) ** f;
 
+  // const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
+  const checkStringContains = (a, b) => (a.indexOf(b) === -1 ? a + b : b + a);
+
   const checkEven = (a) => a % 2 === 0;
 
   const checkChar = (a, b) => b.split(a).length - 1;
@@ -33,9 +36,6 @@ const Fundamentals = () => {
   const checkWholeNumber = (a) => a - Math.floor(a) === 0;
 
   const multipleDivision = (a, b) => (a < b ? a / b : a * b);
-
-  // const checkStringContains = (a, b) => (a.includes(b) ? b + a : a + b);
-  const checkStringContains = (a, b) => (a.indexOf(b) === -1 ? a + b : b + a);
 
   // const roundNumberToTwoDigits = (a) => Math.round(a * 100) / 100;
   const roundNumberToTwoDigits = (a) => Number(a.toFixed(2));
