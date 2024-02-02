@@ -34,7 +34,13 @@ const ArrayMethods = () => {
     console.log(item.price * 0.12);
   });
 
-  console.log(itemForEach);
+  //   console.log(itemForEach);
+
+  // some
+  const hasInexpensiveItems = items.some((item) => {
+    return item.price <= 100;
+  });
+  console.log(hasInexpensiveItems);
 
   return <div>ArrayMethods</div>;
 };
