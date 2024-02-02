@@ -31,16 +31,23 @@ const ArrayMethods = () => {
   //   console.log(findItem);
 
   const itemForEach = items.forEach((item) => {
-    console.log(item.price * 0.12);
+    // console.log(item.price * 0.12);
   });
 
   //   console.log(itemForEach);
 
   // some
   const hasInexpensiveItems = items.some((item) => {
-    return item.price <= 100;
+    return item.price <= 0;
   });
-  console.log(hasInexpensiveItems);
+  //   console.log(hasInexpensiveItems);
+
+  //   every
+  const hasInexpensiveItemsEvery = items.every((item) => {
+    return item.price <= 1000;
+  });
+
+  console.log(hasInexpensiveItemsEvery);
 
   return <div>ArrayMethods</div>;
 };
