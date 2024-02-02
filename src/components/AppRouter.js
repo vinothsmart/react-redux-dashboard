@@ -33,6 +33,7 @@ import { Users } from "./pages/Users/Users";
 import OldUsers from "./pages/Users/OldUsers";
 import Dates from "./pages/JsChallange/Dates";
 import Sets from "./pages/JsChallange/Sets";
+import ArrayMethods from "./pages/JSTamil/ArrayMethods";
 
 const AppRouter = () => {
   return (
@@ -73,6 +74,7 @@ const AppRouter = () => {
       <Route exact path="/arc/challange" component={JSChallange} />
       <Route exact path="/users" component={Users} />
       <Route exact path="/oldusers" component={OldUsers} />
+      <Route exact path="/jstamil/array" component={ArrayMethods} />
     </Switch>
   );
 };
