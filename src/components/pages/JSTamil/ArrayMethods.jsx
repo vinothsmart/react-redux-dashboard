@@ -28,7 +28,13 @@ const ArrayMethods = () => {
     return item.name === "Book";
   });
 
-  console.log(findItem);
+  //   console.log(findItem);
+
+  const itemForEach = items.forEach((item) => {
+    console.log(item.price * 0.12);
+  });
+
+  console.log(itemForEach);
 
   return <div>ArrayMethods</div>;
 };
