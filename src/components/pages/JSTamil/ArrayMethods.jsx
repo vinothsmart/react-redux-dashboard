@@ -15,14 +15,20 @@ const ArrayMethods = () => {
   const filteredItems = items.filter((item) => {
     return item.price >= 100;
   });
-  console.log(filteredItems);
+  //   console.log(filteredItems);
 
   // map method
   const itemNames = items.map((item) => {
     return item.name;
   });
 
-  console.log(itemNames);
+  //   console.log(itemNames);
+
+  const findItem = items.find((item) => {
+    return item.name === "Book";
+  });
+
+  console.log(findItem);
 
   return <div>ArrayMethods</div>;
 };
