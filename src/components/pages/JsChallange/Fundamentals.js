@@ -15,11 +15,11 @@ const Fundamentals = () => {
 
   const getFirstThree = (a) => a.slice(0, 3);
 
+  const stringFind = (a) => a.indexOf("is");
+
   const getFirstHalf = (a) => a.slice(0, a.length / 2);
 
   const removeLastThreeChars = (a) => a.slice(0, -3);
-
-  const stringFind = (a) => a.indexOf("is");
 
   const percentOf = (a, b) => (b / 100) * a;
 
@@ -143,6 +143,15 @@ const Fundamentals = () => {
         <p>{getFirstThree("fgedcba")}</p>
       </center>
       <center>
+        <center>
+          <h1>Find the position of one string in another</h1>
+          <h1>stringFind of index</h1>
+          <p>{stringFind("praise")}</p>
+          <p>{stringFind("risky")}</p>
+          <p>{stringFind("paris")}</p>
+        </center>
+      </center>
+      <center>
         <h1>Extract first half of string</h1>
         <p>{getFirstHalf("abcdefg")}</p>
         <p>{getFirstHalf("1234")}</p>
@@ -153,12 +162,6 @@ const Fundamentals = () => {
         <p>{removeLastThreeChars("abcdefg")}</p>
         <p>{removeLastThreeChars("1234")}</p>
         <p>{removeLastThreeChars("fgedcba")}</p>
-      </center>
-      <center>
-        <h1>stringFind of index</h1>
-        <p>{stringFind("praise")}</p>
-        <p>{stringFind("risky")}</p>
-        <p>{stringFind("paris")}</p>
       </center>
       <center>
         <h1>Return the percentage of a number</h1>
