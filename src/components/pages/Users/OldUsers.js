@@ -1,5 +1,4 @@
-import { useCallback } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const usersDataURL = "https://jsonplaceholder.typicode.com/users";
 
